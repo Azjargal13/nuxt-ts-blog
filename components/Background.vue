@@ -1,9 +1,11 @@
 <template>
-  <div></div>
+  <div class="background">
+    <front-design/>
+  </div>
 </template>
 
-<style>
+<style scoped>
 div {
-  background-image: url("../assets/bg.png");
+  background-image: url("../assets/bg1.jpg");
 }
 </style>

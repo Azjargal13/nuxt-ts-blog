@@ -1,58 +1,24 @@
 <template>
   <div class="container">
     <div>
-      <Background />
-      <h1 class="title">
-        nuxt-blog
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <front-design/>
       </div>
-      <div>
-    <h1>Color mode: {{ $colorMode.value }}</h1>
-    <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
-    </select>
-  </div>
-  <article>
-    <h1>{{ page.title }}</h1>
-    <nuxt-content :document="page" />
-  </article>
-    </div>
+
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
 
-export default Vue.extend(
-  {
-    async asyncData ({ $content }) {
-    const page = await $content('index').fetch()
+export default
+{
+  async asyncData({ $content }) {
+    const page = await $content('index').fetch();
 
     return {
-      page
-    }
-  }
-  })
+      page,
+    };
+  },
+};
 </script>
 
 <style>
