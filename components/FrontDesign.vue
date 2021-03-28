@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<section class="container bg-gradient-to-r from-white to-gray-100">
+		<section class="container bg-gradient-to-r from-white to-gray-100 ">
 			<div class="text-green-900">
 				<navigation />
 				<h1 class="text-6xl p-6">Hey, welcome here :)</h1>
