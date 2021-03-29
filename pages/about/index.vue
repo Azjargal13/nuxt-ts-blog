@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    About me page
+  <div>
+
     <article class="prose lg:prose-xl">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  layout:"blog"
 
 };
 </script>

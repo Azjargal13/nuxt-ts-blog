@@ -1,11 +1,14 @@
 <template>
-	<div>
+	<div class="text-green-900">
 		<section class="container bg-gradient-to-r from-white to-gray-100 ">
-			<div class="text-green-900">
+			<div >
 				<navigation />
-				<h1 class="text-6xl p-6">Hey, welcome here :)</h1>
+
+            	<h1 class="text-6xl p-6">Hey, welcome here :)</h1>
 				<p class="text-3xl">I'm Aza</p>
         <p class="text-4xl p-4">Software Engineer</p>
+
+
 			</div>
 		</section>
 		<section class="container" id="bg-img">
