@@ -1,7 +1,7 @@
 <template>
   <div class="container flex-col">
     <navigation />
-    <Nuxt :nuxt-child-key="article" />
+    <Nuxt />
   </div>
 </template>
 

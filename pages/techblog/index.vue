@@ -1,13 +1,13 @@
 <template>
   <div>
-    <blog-list path="techblog"></blog-list>
+    <blog-list path="techblog" />
   </div>
 </template>
 
 <script>
 export default {
-  layout:"blog"
-};
+  layout: 'blog'
+}
 </script>
 
 <style scoped></style>

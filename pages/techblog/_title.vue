@@ -1,12 +1,16 @@
 <template>
   <div class="container">
-    eeey its me
-    <!-- <Article /> -->
+    <Article :path="postPath" />
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      postPath: 'techblog'
+    }
+  }
 
 }
 </script>
