@@ -1,10 +1,15 @@
 <template>
-  <div class="container">
-    <Article :path="postPath" />
+  <div class="">
+    <navigation />
+    <div class="container">
+      <Article :path="postPath" />
+    </div>
+    <prev-next />
   </div>
 </template>
 
 <script>
+
 export default {
   data () {
     return {
