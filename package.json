@@ -19,11 +19,15 @@
     "@nuxt/types": "^2.15.3",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.0.5",
+    "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/tailwindcss": "^4.0.1",
     "@tailwindcss/typography": "^0.4.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.8.0",
     "postcss": "^8.2.8"
   }

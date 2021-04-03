@@ -1,17 +1,28 @@
 <template>
-  <div class="text-lg">
-    <a href="/techblog" class="hover:text-green-400"> Tech blog | </a>
-    <a href="/blog" class="hover:text-green-400">  Blog |  </a>
-    <a href="/about" class="hover:text-green-400"> About</a>
+  <div class="text-lg p-6 static">
+    <NuxtLink v-show="$route.path !== '/'" to="/">
+      home |
+    </NuxtLink>
+    <NuxtLink to="/techblog">
+      tech blog |
+    </NuxtLink>
+    <NuxtLink to="/blog">
+      blog |
+    </NuxtLink>
+    <NuxtLink to="/about">
+      about
+    </NuxtLink>
   </div>
 </template>
 
 <script>
 export default {
 
-};
+}
 </script>
 
 <style scoped>
-
+a:hover {
+color: #10b981;
+}
 </style>

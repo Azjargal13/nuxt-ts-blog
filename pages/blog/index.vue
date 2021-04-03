@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
-        this is about blog
+    <div >
+         <blog-list path="blog"></blog-list>
     </div>
 </template>
 
 <script>
     export default {
-        
+        layout:"blog"
     }
 </script>
 

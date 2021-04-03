@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <div>
-      <front-design/>
-      </div>
-
+      <front-design />
+    </div>
   </div>
 </template>
 
@@ -11,14 +10,13 @@
 
 export default
 {
-  async asyncData({ $content }) {
-    const page = await $content('index').fetch();
-
+  async asyncData ({ $content }) {
+    const page = await $content('index').fetch()
     return {
-      page,
-    };
-  },
-};
+      page
+    }
+  }
+}
 </script>
 
 <style>

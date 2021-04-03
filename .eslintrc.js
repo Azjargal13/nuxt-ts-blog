@@ -1,22 +1,11 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
+  root: true,
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module'
   },
   extends: [
-    'plugin:vue/essential',
-    'airbnb-base',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'vue',
+    '@nuxtjs/eslint-config'
   ],
   rules: {
     'consistent-return': 2,
@@ -25,6 +14,6 @@ module.exports = {
     'semi': [1, 'always'],
     'space-unary-ops': 2,
     'no- tabs': 0,
-  },
+  }
 
 };
