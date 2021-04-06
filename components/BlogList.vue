@@ -1,8 +1,9 @@
 <template>
-  <div>
-    {{ articles.length }}
+  <div class="container flex flex-col">
     <NuxtLink v-for="post in articles" :key="post.id" :to="post.path">
-      <h1>{{ post.title }}</h1>
+      <ul>
+        <li>{{ post.title }}</li>
+      </ul>
     </NuxtLink>
   </div>
 </template>
@@ -15,18 +16,15 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       articles: []
-    }
+    };
   },
-  async mounted () {
-    this.articles = await this.$content(this.path).fetch()
+  async mounted() {
+    this.articles = await this.$content(this.path).fetch();
   }
-
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

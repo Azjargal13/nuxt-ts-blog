@@ -1,5 +1,5 @@
 <template>
-  <div class="text-lg p-6 static">
+  <div class="text-lg p-6 static nav flex justify-center">
     <NuxtLink v-show="$route.path !== '/'" to="/">
       home |
     </NuxtLink>

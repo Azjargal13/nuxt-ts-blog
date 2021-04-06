@@ -1,6 +1,6 @@
 <template>
   <div class="container flex-col">
-    <navigation />
+    <navigation/>
     <Nuxt />
     <Footer />
   </div>

@@ -5,28 +5,42 @@ import { default } from '../pages/techblog/_title.vue';
       <div>
         <navigation />
 
-        <h1 class="text-6xl p-6 welcome">
+        <h1 class="text-5xl p-6 welcome">
           Hey, welcome here :)
         </h1>
-        <p class="text-3xl font-medium font-sans">
+        <p class="text-2xl font-medium font-sans">
           I'm Aza
         </p>
-        <p class="text-4xl p-4">
+        <p class="text-3xl p-4">
           {{ showMajor }}
         </p>
       </div>
     </section>
     <section id="bg-img" class="container">
       <div class="grid grid-cols-1 divide-y divide-green-700 text-2xl">
-        <div>
-          <p class="text-xl">
+        <div
+          class="text-xl"
+          @mouseover="onhoverCountry = true"
+          @mouseleave="onhoverCountry = false"
+        >
+          <p v-show="!onhoverCountry">
             Where I am from
           </p>
+          <p v-show="onhoverCountry">
+            {{ country }}
+          </p>
         </div>
-        <div>
-          <h2 class="text-xl">
+        <div
+          class="text-xl"
+          @mouseover="onhoverLiving = true"
+          @mouseleave="onhoverLiving = false"
+        >
+          <h2 v-show="!onhoverLiving">
             Where I live
           </h2>
+          <p v-show="onhoverLiving">
+            {{ living }}
+          </p>
         </div>
       </div>
     </section>
@@ -37,56 +51,89 @@ import { default } from '../pages/techblog/_title.vue';
         </h1>
       </div>
 
-      <div class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-gray-700 ">
-        <div><a class="text-xl p-2" href="#">connect on LinkedIn</a></div>
-        <div><a class="text-xl p-2" href="#">email me</a></div>
-        <div><a class="text-xl p-2" href="#">check out Github</a></div>
+      <div
+        class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-gray-700 "
+      >
+        <div>
+          <a
+            class="text-xl p-2"
+            href="https://www.linkedin.com/in/azjargal-gankhuyag/"
+            target="_blank"
+            >connect on LinkedIn</a
+          >
+        </div>
+        <div
+          @mouseover="onhoverEmail = true"
+          @mouseleave="onhoverEmail = false"
+        >
+          <a class="text-xl p-2" v-show="!onhoverEmail">email me</a>
+          <p v-show="onhoverEmail" class="text-lg">{{ email }}</p>
+        </div>
+        <div>
+          <a
+            class="text-xl p-2"
+            href="https://github.com/Azjargal13"
+            target="_blank"
+            >check out Github</a
+          >
+        </div>
       </div>
     </section>
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      major: ['Software engineer', 'Full stack developer', 'Front-end developer', 'Research & Dev', 'Amateur blogger'],
-      showMajor: '',
-      timer: null
-
-    }
+      major: [
+        "Software engineer",
+        "Full stack developer",
+        "Front-end developer",
+        "Research & Dev",
+        "Amateur blogger"
+      ],
+      showMajor: "",
+      timer: null,
+      country: "Mongolia",
+      living: "Tokyo, Japan",
+      email: "azjargalgankhuyag13@gmail.com",
+      onhoverCountry: false,
+      onhoverLiving: false,
+      onhoverEmail: false
+    };
   },
-  mounted () {
-    this.updateMajor(this.major, this.delegate, 3000)
+  mounted() {
+    this.updateMajor(this.major, this.delegate, 3000);
   },
 
   methods: {
-    updateMajor (arr, delegate, delay) {
-      let i = 0
+    updateMajor(arr, delegate, delay) {
+      let i = 0;
       const interval = setInterval(() => {
-        delegate(arr[i])
+        delegate(arr[i]);
         if (i++ >= arr.length - 1) {
-          clearInterval(interval)
+          clearInterval(interval);
         }
-      }, delay)
+      }, delay);
     },
-    delegate (value) {
-      this.showMajor = value
+    delegate(value) {
+      this.showMajor = value;
     }
   }
-}
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Syne+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Syne+Mono&display=swap");
 
-#bg-img{
-  background-image: url('../assets/bg1.jpg');
+#bg-img {
+  background-image: url("../assets/bg1.jpg");
 }
-#bg-img1{
-  background-image: url('../assets/bg4.jpg');
+#bg-img1 {
+  background-image: url("../assets/bg4.jpg");
 }
 
-.welcome{
-  font-family: 'Noto Sans TC', sans-serif;
+.welcome {
+  font-family: "Noto Sans TC", sans-serif;
 }
 </style>

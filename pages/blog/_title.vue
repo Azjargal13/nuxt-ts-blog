@@ -1,7 +1,7 @@
 <template>
   <div>
     <navigation />
-    <div class="container">
+    <div class="container justify-center flex">
       <Article
         :path="postPath"
       />
