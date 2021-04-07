@@ -6,12 +6,12 @@ module.exports = {
       center: true,
       padding: '2rem'
     },
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [
     require('@tailwindcss/typography')
-  ],
+  ]
 }

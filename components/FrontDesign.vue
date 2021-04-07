@@ -1,4 +1,3 @@
-import { default } from '../pages/techblog/_title.vue';
 <template>
   <div class="text-green-900">
     <section class="container bg-gradient-to-r from-white to-gray-100 ">
@@ -6,10 +5,10 @@ import { default } from '../pages/techblog/_title.vue';
         <navigation />
 
         <h1 class="text-5xl p-6 welcome">
-          Hey, welcome here :)
+          vivere memento
         </h1>
         <p class="text-2xl font-medium font-sans">
-          I'm Aza
+          Hi, I'm Aza :)
         </p>
         <p class="text-3xl p-4">
           {{ showMajor }}

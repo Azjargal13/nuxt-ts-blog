@@ -9,11 +9,11 @@ module.exports = {
   ],
   rules: {
     'consistent-return': 2,
-    'indent': [2, "space"],
+    indent: 2,
     'no-else-return': 1,
-    'semi': [1, 'always'],
+    semi: 1,
     'space-unary-ops': 2,
-    'no- tabs': 0,
+    'no- tabs': 0
   }
 
 };
