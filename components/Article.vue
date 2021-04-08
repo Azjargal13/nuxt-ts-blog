@@ -1,13 +1,33 @@
 <template>
-  <div>
+  <div class="shadow-md">
     <article v-for="post in article" :key="post.id" class="prose lg:prose-xl">
       <h1>{{ post.title }}</h1>
+      <h5>#Label</h5>
+      <h5>#Tags</h5>
+      <div class="mt-2 mr-2 clock-icon text-lg ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 clock mb-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        {{ formatTime(post.createdAt) }}
+      </div>
       <nuxt-content :document="post" />
     </article>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   props: {
     path: {
@@ -23,11 +43,18 @@ export default {
   },
   async mounted () {
     this.article = await this.$content(this.path).where({ slug: this.$route.params.title }).fetch()
+  },
+  methods: {
+    formatTime (value) {
+      return moment(value).format('MMMM Do YYYY')
+    }
   }
 
 }
 </script>
 
 <style scoped>
-
+.clock{
+  display: inline-block;
+}
 </style>

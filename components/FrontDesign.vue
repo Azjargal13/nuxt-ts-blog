@@ -1,6 +1,6 @@
 <template>
   <div class="text-green-900">
-    <section class="container bg-gradient-to-r from-white to-gray-100 ">
+    <section id="bg-img0" class="container">
       <div>
         <navigation />
 
@@ -25,7 +25,7 @@
           <p v-show="!onhoverCountry">
             Where I am from
           </p>
-          <p v-show="onhoverCountry">
+          <p v-show="onhoverCountry" class="hover:text-green-400">
             {{ country }}
           </p>
         </div>
@@ -37,7 +37,7 @@
           <h2 v-show="!onhoverLiving">
             Where I live
           </h2>
-          <p v-show="onhoverLiving">
+          <p v-show="onhoverLiving" class="hover:text-green-400">
             {{ living }}
           </p>
         </div>
@@ -51,30 +51,30 @@
       </div>
 
       <div
-        class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-gray-700 "
+        class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-black "
       >
         <div>
           <a
             class="text-xl p-2"
             href="https://www.linkedin.com/in/azjargal-gankhuyag/"
             target="_blank"
-            >connect on LinkedIn</a
-          >
+          >connect on LinkedIn</a>
         </div>
         <div
           @mouseover="onhoverEmail = true"
           @mouseleave="onhoverEmail = false"
         >
-          <a class="text-xl p-2" v-show="!onhoverEmail">email me</a>
-          <p v-show="onhoverEmail" class="text-lg">{{ email }}</p>
+          <a v-show="!onhoverEmail" class="text-xl p-2">email me</a>
+          <p v-show="onhoverEmail" class="text-base hover:text-green-400">
+            {{ email }}
+          </p>
         </div>
         <div>
           <a
             class="text-xl p-2"
             href="https://github.com/Azjargal13"
             target="_blank"
-            >check out Github</a
-          >
+          >check out Github</a>
         </div>
       </div>
     </section>
@@ -82,44 +82,44 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       major: [
-        "Software engineer",
-        "Full stack developer",
-        "Front-end developer",
-        "Research & Dev",
-        "Amateur blogger"
+        'Software engineer',
+        'Full stack developer',
+        'Front-end developer',
+        'Research & Dev',
+        'Amateur blogger'
       ],
-      showMajor: "",
+      showMajor: '',
       timer: null,
-      country: "Mongolia",
-      living: "Tokyo, Japan",
-      email: "azjargalgankhuyag13@gmail.com",
+      country: 'Mongolia',
+      living: 'Tokyo, Japan',
+      email: 'azjargalgankhuyag13@gmail.com',
       onhoverCountry: false,
       onhoverLiving: false,
       onhoverEmail: false
-    };
+    }
   },
-  mounted() {
-    this.updateMajor(this.major, this.delegate, 3000);
+  mounted () {
+    // this.updateMajor(this.major, this.delegate, 3000)
   },
 
   methods: {
-    updateMajor(arr, delegate, delay) {
-      let i = 0;
-      const interval = setInterval(() => {
-        delegate(arr[i]);
-        if (i++ >= arr.length - 1) {
-          clearInterval(interval);
-        }
-      }, delay);
-    },
-    delegate(value) {
-      this.showMajor = value;
-    }
+    // updateMajor (arr, delegate, delay) {
+    //   let i = 0
+    //   const interval = setInterval(() => {
+    //     delegate(arr[i])
+    //     if (i++ >= arr.length - 1) {
+    //       clearInterval(interval)
+    //     }
+    //   }, delay)
+    // },
+    // delegate (value) {
+    //   this.showMajor = value
+    // }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -130,8 +130,13 @@ export default {
 }
 #bg-img1 {
   background-image: url("../assets/bg4.jpg");
+  background-size: 800px 700px;
 }
 
+#bg-img0 {
+  background-image: url("../assets/bg0.jpg");
+  background-size: 750px 650px;
+}
 .welcome {
   font-family: "Noto Sans TC", sans-serif;
 }
