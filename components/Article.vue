@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-full container ">
+  <div class="">
     <section class=" prose prose-sm sm:prose lg:prose-lg mx-auto md:m-2 sm:m-4">
-      <article v-for="post in article" :key="post.id" class="shadow-md rounded p-4 md:p-12 shadow-2xl lg:w-3/4">
+      <article v-for="post in article" :key="post.id" class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article ">
         <h1>
           {{ post.title }}
         </h1>
@@ -23,6 +23,7 @@
             />
           </svg>
           {{ formatTime(post.createdAt) }}
+          <img v-if="post.image" :src="post.image" alt="img" class="max-h-1/5 min-w-sm">
         </div>
         <nuxt-content
           :document="post"
@@ -63,7 +64,8 @@ export default {
 .clock{
   display: inline-block;
 }
-.container{
+.blog-article{
   text-align: justify;
 }
+
 </style>

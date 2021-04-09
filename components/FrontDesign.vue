@@ -4,10 +4,10 @@
       <div>
         <navigation />
 
-        <h1 class="text-5xl p-6 welcome">
+        <h1 class="lg:text-5xl sm:text-4xl p-6 welcome">
           vivere memento
         </h1>
-        <p class="text-2xl font-medium font-sans">
+        <p class="lg:text-2xl sm:text-xl font-medium font-sans">
           Hi, I'm Aza :)
         </p>
         <p class="text-3xl p-4">

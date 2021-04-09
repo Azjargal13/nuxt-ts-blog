@@ -90,3 +90,6 @@ html {
 .page-leave-to {
   opacity: 0;
 }
+a:hover {
+  color: #10b981;
+}

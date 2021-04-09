@@ -11,10 +11,7 @@
 </template>
 
 <script>
-import Navigation from '~/components/Navigation.vue'
-import PrevNext from '~/components/PrevNext.vue'
 export default {
-  components: { Navigation, PrevNext },
   data () {
     return {
       postPath: 'blog'
