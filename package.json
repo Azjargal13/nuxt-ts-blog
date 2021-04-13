@@ -6,7 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint":"eslint .",
+    "lint-fix": "eslint --fix --ext .js,.jsx,*.vue ."
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.17",
