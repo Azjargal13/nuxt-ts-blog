@@ -1,6 +1,8 @@
 ---
 title: Another md file title
 description: hey this is different title for md .
+tag: ["title", "psychology", "education"]
+label: [free-time, writing, testing]
 ---
 An h1 header
 ============
