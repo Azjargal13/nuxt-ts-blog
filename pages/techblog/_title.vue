@@ -4,22 +4,18 @@
     <div class="container justify-center flex">
       <Article :path="postPath" />
     </div>
-    <prev-next />
+    <prev-next :path="postPath" />
   </div>
 </template>
 
 <script>
-
 export default {
-  data () {
+  data() {
     return {
-      postPath: 'techblog'
-    }
+      postPath: "techblog"
+    };
   }
-
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

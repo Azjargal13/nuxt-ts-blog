@@ -1,7 +1,11 @@
 <template>
   <div class="">
     <section class=" prose prose-sm sm:prose lg:prose-lg mx-auto md:m-2 sm:m-4">
-      <article v-for="post in article" :key="post.id" class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article ">
+      <article
+        v-for="post in article"
+        :key="post.id"
+        class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article "
+      >
         <h1>
           {{ post.title }}
         </h1>
@@ -23,49 +27,52 @@
             />
           </svg>
           {{ formatTime(post.createdAt) }}
-          <img v-if="post.image" :src="post.image" alt="img" class="max-h-1/5 min-w-sm">
+          <img
+            v-if="post.image"
+            :src="post.image"
+            alt="img"
+            class="max-h-1/5 min-w-sm"
+          />
         </div>
-        <nuxt-content
-          :document="post"
-        />
+        <nuxt-content :document="post" />
       </article>
     </section>
   </div>
 </template>
 
 <script>
-import moment from 'moment'
+import moment from "moment";
 export default {
   props: {
     path: {
       type: String,
       required: true,
-      default: ''
+      default: ""
     }
   },
-  data () {
+  data() {
     return {
       article: {}
-    }
+    };
   },
-  async mounted () {
-    this.article = await this.$content(this.path).where({ slug: this.$route.params.title }).fetch()
+  async mounted() {
+    this.article = await this.$content(this.path)
+      .where({ slug: this.$route.params.title })
+      .fetch();
   },
   methods: {
-    formatTime (value) {
-      return moment(value).format('MMMM Do YYYY')
+    formatTime(value) {
+      return moment(value).format("MMMM Do YYYY");
     }
   }
-
-}
+};
 </script>
 
 <style scoped>
-.clock{
+.clock {
   display: inline-block;
 }
-.blog-article{
+.blog-article {
   text-align: justify;
 }
-
 </style>

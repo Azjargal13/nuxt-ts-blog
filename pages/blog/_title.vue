@@ -2,25 +2,20 @@
   <div>
     <navigation />
     <div class="container justify-center flex">
-      <Article
-        :path="postPath"
-      />
+      <Article :path="postPath" />
     </div>
-    <prev-next />
+    <prev-next :path="postPath" />
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      postPath: 'blog'
-    }
+      postPath: "blog"
+    };
   }
-
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
