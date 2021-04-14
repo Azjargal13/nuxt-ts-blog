@@ -1,9 +1,9 @@
 <template>
-  <div class="container flex flex-col divide-y-2 divide-green-500 ">
-    <div v-for="post in articles" :key="post.id" class="blog-list m-6">
+  <div class="container flex flex-col divide-y-2 divide-green-500">
+    <div v-for="post in fewPosts" :key="post.id" class="blog-list m-6">
       <div class="blog-col ">
         <NuxtLink :to="post.path" class="hover:text-green-500 ">
-          <ul class="lg:text-2xl font-medium sm:text-lg mb-2">
+          <ul class="lg:text-xl font-medium sm:text-lg mb-2">
             <li>{{ post.title }}</li>
           </ul>
         </NuxtLink>
@@ -21,9 +21,9 @@
             <path
               fill="currentColor"
               d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            ></path>
+            />
           </svg>
-          <span v-for="item in post.tag" :key="item.id" class="m-0.5">
+          <span v-for="item in post.tags" :key="item.id" class="m-0.5">
             {{ item }} |
           </span>
 
@@ -74,15 +74,32 @@ export default {
   },
   data() {
     return {
-      articles: []
+      articles: [],
+      fewPosts: [],
+      next: {}
     };
   },
-  async mounted() {
-    this.articles = await this.$content(this.path).fetch();
+  mounted() {
+    // this.articles = await this.$content(this.path).fetch();
+    this.fetchFewPosts().then(values => {
+      this.fewPosts = values.posts;
+      this.next = values.nextPage;
+    });
   },
   methods: {
     formatTime(value) {
       return moment(value).format("MMMM Do YYYY");
+    },
+    async fetchFewPosts() {
+      const fewPosts = await this.$content(this.path)
+        .only(["createdAt", "path", "title", "tags"])
+        .sortBy("createdAt", "desc")
+        // .limit(10)
+        .fetch();
+
+      const nextPage = fewPosts.length === 5;
+      const posts = nextPage ? fewPosts.slice(0, -1) : fewPosts;
+      return { nextPage, posts };
     }
   }
 };
@@ -97,6 +114,6 @@ export default {
 }
 .container {
   justify-content: start;
-  align-items: flex-start;
+  align-items: center;
 }
 </style>

@@ -1,10 +1,9 @@
 <template>
-  <div class="container flex-col">
-    <navigation/>
+  <div class="flex-col blog-container">
+    <navigation />
     <Nuxt />
     <Footer />
   </div>
 </template>
 
-<style>
-</style>
+<style scoped></style>

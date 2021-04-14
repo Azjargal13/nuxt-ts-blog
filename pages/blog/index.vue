@@ -6,10 +6,8 @@
 
 <script>
 export default {
-  layout: 'blog'
-}
+  layout: "blog"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

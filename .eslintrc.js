@@ -16,6 +16,8 @@ module.exports = {
     "no- tabs": 0,
 
     quotes: [2, "double", { avoidEscape: true }],
-    "space-before-function-paren": "always"
+    "space-before-function-paren": 0,
+    "vue/html-self-closing": 0,
+    "arrow-parens": 0
   }
 }

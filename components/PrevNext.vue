@@ -44,6 +44,7 @@ export default {
       const [prev, next] = await this.$content(this.path)
         .only(["title", "slug"])
         .sortBy("createdAt", "asc")
+        // .surround(this.$route.params.slug)
         .fetch();
       return {
         prev,

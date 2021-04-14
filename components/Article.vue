@@ -1,10 +1,10 @@
 <template>
-  <div class="">
-    <section class=" prose prose-sm sm:prose lg:prose-lg mx-auto md:m-2 sm:m-4">
+  <div class="article">
+    <section class=" prose prose-sm sm:prose lg:prose-lg mx-auto md:m-2">
       <article
         v-for="post in article"
         :key="post.id"
-        class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article "
+        class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article sm:p-12"
       >
         <h1>
           {{ post.title }}
@@ -21,7 +21,7 @@
             <path
               fill="currentColor"
               d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
-            ></path>
+            />
           </svg>
           <span v-for="item in post.tag" :key="item.id" class="m-0.5">
             {{ item }} |
@@ -45,12 +45,9 @@
           </svg>
           {{ formatTime(post.createdAt) }}
         </div>
-        <img
-          v-if="post.image"
-          :src="post.image"
-          alt="img"
-          class="max-h-1/5 min-w-sm"
-        />
+        <div v-if="post.image">
+          <img :src="post.image" alt="img" class="max-h-1/5 min-w-sm" />
+        </div>
         <nuxt-content :document="post" />
       </article>
     </section>
@@ -91,5 +88,8 @@ export default {
 }
 .blog-article {
   text-align: justify;
+}
+.article {
+  align-items: center;
 }
 </style>
