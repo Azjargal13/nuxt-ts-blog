@@ -3,12 +3,11 @@
     <section id="bg-img0" class="container">
       <div>
         <navigation />
-
         <h1 class="lg:text-5xl sm:text-4xl p-6 welcome">
-          vivere memento
+          {{ motto }}
         </h1>
         <p class="lg:text-2xl sm:text-xl font-medium font-sans">
-          Hi, I'm Aza :)
+          {{ intro }}
         </p>
         <p class="text-3xl p-4">
           {{ showMajor }}
@@ -51,14 +50,15 @@
       </div>
 
       <div
-        class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-black "
+        class="grid grid-cols-1 divide-y divide-green-700 text-2xl text-black"
       >
         <div>
           <a
             class="text-xl p-2"
             href="https://www.linkedin.com/in/azjargal-gankhuyag/"
             target="_blank"
-          >connect on LinkedIn</a>
+            >connect on LinkedIn</a
+          >
         </div>
         <div
           @mouseover="onhoverEmail = true"
@@ -74,7 +74,8 @@
             class="text-xl p-2"
             href="https://github.com/Azjargal13"
             target="_blank"
-          >check out Github</a>
+            >check out Github</a
+          >
         </div>
       </div>
     </section>
@@ -82,26 +83,28 @@
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       major: [
-        'Software engineer',
-        'Full stack developer',
-        'Front-end developer',
-        'Research & Dev',
-        'Amateur blogger'
+        "Software engineer",
+        "Full stack developer",
+        "Front-end developer",
+        "Research & Dev",
+        "Amateur blogger"
       ],
-      showMajor: '',
+      motto: "vivero memento",
+      intro: "Hi, I'm Aza :)",
+      showMajor: "",
       timer: null,
-      country: 'Mongolia',
-      living: 'Tokyo, Japan',
-      email: 'azjargalgankhuyag13@gmail.com',
+      country: "Mongolia",
+      living: "Tokyo, Japan",
+      email: "azjargalgankhuyag13@gmail.com",
       onhoverCountry: false,
       onhoverLiving: false,
       onhoverEmail: false
-    }
+    };
   },
-  mounted () {
+  mounted() {
     // this.updateMajor(this.major, this.delegate, 3000)
   },
 
@@ -119,7 +122,7 @@ export default {
     //   this.showMajor = value
     // }
   }
-}
+};
 </script>
 
 <style scoped>

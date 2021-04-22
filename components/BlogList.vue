@@ -1,14 +1,12 @@
 <template>
   <div class="container flex flex-col divide-y-2 divide-green-500">
     <div v-for="post in fewPosts" :key="post.id" class="blog-list m-6">
-      <div class="blog-col ">
-        <NuxtLink :to="post.path" class="hover:text-green-500 ">
+      <div class="blog-col">
+        <NuxtLink :to="post.path" class="hover:text-green-500">
           <ul class="lg:text-xl font-medium sm:text-lg mb-2">
             <li>{{ post.title }}</li>
           </ul>
         </NuxtLink>
-        <!-- {{ post }} -->
-
         <div class="mb-2 flex flex-row hover:text-green-500">
           <svg
             aria-hidden="true"
