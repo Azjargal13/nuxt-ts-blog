@@ -46,7 +46,12 @@
           {{ formatTime(post.createdAt) }}
         </div>
         <div v-if="post.image">
-          <img :src="post.image" alt="img" class="max-h-1/5 min-w-sm" />
+          <img
+            :src="post.image"
+            alt="img"
+            class="max-h-1/5 min-w-sm"
+            style="margin: 0 auto"
+          />
         </div>
         <nuxt-content :document="post" />
       </article>
