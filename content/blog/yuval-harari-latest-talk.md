@@ -1,8 +1,8 @@
 ---
 title: A talk about "Future" by Yuval Noah Harari and Daniel Kahneman
 description: Two of the amazing thinkers of the world are discussing about the global trends and more of the "Future". This is very refreshing and educating type of a talk which I find super interesting to listen.
-tags: "education", "video-interview", "talk"
-label: free-time, writing
+tags: ["education", "video-interview", "talk"]
+label: [free-time, writing]
 image: https://source.unsplash.com/TKz4lU3Npa4/640x853
 createdAt: April, 20, 2021
 author: Aza

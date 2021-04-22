@@ -1,8 +1,8 @@
 ---
 title: The Year Earth Changed | Documentary | Personal feedback
 description: Documentary is always my favorite. "The Year Earth Changed", released in 2021, did open my eyes in some ways, more of respecting the nature and other living beings.
-tags: "education", "documentary"
-label: free-time, writing
+tags: ["education", "documentary"]
+label: [free-time, writing]
 image: https://image.tmdb.org/t/p/w185/cLwQRXfzPjmpU6I78TCkoHazO0A.jpg
 createdAt: April, 19, 2021
 author: Aza
