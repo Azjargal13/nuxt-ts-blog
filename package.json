@@ -7,13 +7,14 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint":"eslint .",
+    "lint": "eslint .",
     "lint-fix": "eslint --fix --ext .js,.jsx,*.vue ."
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.17",
     "@amcharts/amcharts4-geodata": "^4.1.19",
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "core-js": "^3.9.1",
     "moment": "^2.29.1",
     "nuxt": "^2.15.3"
