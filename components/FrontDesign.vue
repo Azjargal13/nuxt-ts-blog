@@ -1,47 +1,62 @@
 <template>
   <div class="text-green-900">
-    <section id="bg-img0" class="container">
-      <div>
-        <navigation />
-        <h1 class="lg:text-5xl sm:text-4xl p-6 welcome">
-          {{ motto }}
-        </h1>
-        <p class="lg:text-2xl sm:text-xl font-medium font-sans">
-          {{ intro }}
-        </p>
-        <p class="text-3xl p-4">
-          {{ showMajor }}
-        </p>
-      </div>
-    </section>
-    <section id="bg-img" class="container">
-      <div class="grid grid-cols-1 divide-y divide-green-700 text-2xl">
-        <div
-          class="text-xl"
-          @mouseover="onhoverCountry = true"
-          @mouseleave="onhoverCountry = false"
-        >
-          <p v-show="!onhoverCountry">
-            Where I am from
+    <div id="section-intro">
+      <section
+        v-show="showIntro"
+        id="bg-img0"
+        class="container"
+        style="cursor:pointer"
+        @click="toggle"
+      >
+        <div>
+          <navigation />
+          <h1 class="lg:text-5xl sm:text-4xl p-6 welcome">
+            {{ motto }}
+          </h1>
+          <p class="lg:text-2xl sm:text-xl font-medium font-sans">
+            {{ intro }}
+            <span> &#128516; </span>
           </p>
-          <p v-show="onhoverCountry" class="hover:text-green-400">
-            {{ country }}
+          <p class="text-3xl p-4">
+            {{ showMajor }}
           </p>
         </div>
-        <div
-          class="text-xl"
-          @mouseover="onhoverLiving = true"
-          @mouseleave="onhoverLiving = false"
-        >
-          <h2 v-show="!onhoverLiving">
-            Where I live
-          </h2>
-          <p v-show="onhoverLiving" class="hover:text-green-400">
-            {{ living }}
-          </p>
+      </section>
+      <section
+        v-show="showLocation"
+        id="bg-img"
+        class="container"
+        style="cursor:pointer"
+        @click="toggle"
+      >
+        <div class="grid grid-cols-1 divide-y divide-green-700 text-2xl">
+          <div
+            class="text-xl"
+            @mouseover="onhoverCountry = true"
+            @mouseleave="onhoverCountry = false"
+          >
+            <p v-show="!onhoverCountry">
+              Where I am from
+            </p>
+            <p v-show="onhoverCountry" class="hover:text-green-400">
+              {{ country }}
+            </p>
+          </div>
+          <div
+            class="text-xl"
+            @mouseover="onhoverLiving = true"
+            @mouseleave="onhoverLiving = false"
+          >
+            <h2 v-show="!onhoverLiving">
+              Where I live
+            </h2>
+            <p v-show="onhoverLiving" class="hover:text-green-400">
+              {{ living }}
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <section id="bg-img1" class="container">
       <div>
         <h1 class="p-8">
@@ -93,7 +108,7 @@ export default {
         "Amateur blogger"
       ],
       motto: "vivero memento",
-      intro: "Hi, I'm Aza :)",
+      intro: "Hi, I'm Aza",
       showMajor: "",
       timer: null,
       country: "Mongolia",
@@ -101,7 +116,9 @@ export default {
       email: "azjargalgankhuyag13@gmail.com",
       onhoverCountry: false,
       onhoverLiving: false,
-      onhoverEmail: false
+      onhoverEmail: false,
+      showIntro: true,
+      showLocation: false
     };
   },
   mounted() {
@@ -109,6 +126,10 @@ export default {
   },
 
   methods: {
+    toggle() {
+      this.showLocation = !this.showLocation;
+      this.showIntro = !this.showIntro;
+    }
     // updateMajor (arr, delegate, delay) {
     //   let i = 0
     //   const interval = setInterval(() => {
@@ -128,8 +149,15 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Syne+Mono&display=swap");
 
+#section-intro {
+  transition: 0.5s all ease-out;
+  transform: rotateY(0) scale(1);
+}
+
 #bg-img {
   background-image: url("../assets/bg1.jpg");
+  transition-delay: 0.17s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 #bg-img1 {
   background-image: url("../assets/bg4.jpg");
@@ -139,7 +167,10 @@ export default {
 #bg-img0 {
   background-image: url("../assets/bg0.jpg");
   background-size: 750px 650px;
+  transition: 0.4 all linear;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .welcome {
   font-family: "Noto Sans TC", sans-serif;
 }

@@ -6,7 +6,7 @@
         :key="post.id"
         class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article sm:p-12"
       >
-        <h1>
+        <h1 class="text-left">
           {{ post.title }}
         </h1>
         <div class="mb-2 flex flex-row justify-center">
@@ -92,6 +92,7 @@ export default {
   display: inline-block;
 }
 .blog-article {
+  max-width: 900px;
   text-align: justify;
 }
 .article {

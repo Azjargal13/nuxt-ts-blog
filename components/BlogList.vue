@@ -113,5 +113,6 @@ export default {
 .container {
   justify-content: start;
   align-items: center;
+  max-width: 600px;
 }
 </style>
