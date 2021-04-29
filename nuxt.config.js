@@ -31,6 +31,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "~/plugins/vue-gtag" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,8 +43,7 @@ export default {
     "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/color-mode"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -54,13 +54,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  ssr: false,
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
-  }
+  ssr: false
 }
