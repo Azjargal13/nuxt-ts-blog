@@ -4,6 +4,9 @@
     <Footer />
   </div>
 </template>
-
-<style>
-</style>
+<script>
+export default {
+  name: "Default"
+};
+</script>
+<style></style>
