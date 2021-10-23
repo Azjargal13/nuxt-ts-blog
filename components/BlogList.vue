@@ -1,43 +1,51 @@
 <template>
-  <div class="container flex flex-col divide-y-2 divide-green-500">
-    <div v-for="post in fewPosts" :key="post.id" class="blog-list m-6">
+  <div class="container flex flex-col divide-y-2 w-full divide-green-500">
+    <div v-for="post in fewPosts" :key="post.id" class="blog-list p-6 w-full ">
       <div class="blog-col">
         <NuxtLink :to="post.path" class="hover:text-green-500">
           <ul class="lg:text-xl font-medium sm:text-lg mb-2">
             <li>{{ post.title }}</li>
           </ul>
         </NuxtLink>
-        <div class="mb-2 flex flex-row hover:text-green-500">
+        <div class="mb-2 flex flex-row ">
           <svg
             aria-hidden="true"
             focusable="false"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            class="h-4 w-4 mt-2 mr-1"
+            class="h-4 w-4 mt-3 mr-1 "
           >
             <path
               fill="currentColor"
               d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
             />
           </svg>
-          <span v-for="item in post.tags" :key="item.id" class="m-0.5">
-            {{ item }} |
+          <span
+            v-for="(item, id) in post.tags"
+            :key="id"
+            class="mt-2 hover:text-green-500"
+            style="cursor:pointer"
+          >
+            {{ item }}
+            <span v-show="id !== post.tags.length - 1" class="mx-2">
+              |
+            </span>
           </span>
-
+          <!-- slack tag icon -->
           <!-- <svg
-                class="h-6 w-6"
-                aria-hidden="true"
-                focusable="false"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M446.2 270.4c-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-30.3-90 45.4-15.1c19.1-6.2 29.1-26.8 23-45.9-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-93.4 31.2-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-45.3 15c-19.1 6.2-29.1 26.8-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l30.3 90L78 354.8c-19 6.2-29.1 26.9-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 93.6-31.3 15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 45.4-15.1c19-6 29.1-26.7 22.9-45.7zm-254.1 47.2l-30.3-90.2 93.5-31.3 30.3 90.2-93.5 31.3z"
-                ></path>
-              </svg> -->
+            class="h-6 w-6"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M446.2 270.4c-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-30.3-90 45.4-15.1c19.1-6.2 29.1-26.8 23-45.9-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-93.4 31.2-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-45.3 15c-19.1 6.2-29.1 26.8-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l30.3 90L78 354.8c-19 6.2-29.1 26.9-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 93.6-31.3 15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 45.4-15.1c19-6 29.1-26.7 22.9-45.7zm-254.1 47.2l-30.3-90.2 93.5-31.3 30.3 90.2-93.5 31.3z"
+            ></path>
+          </svg> -->
         </div>
         <div class="mt-4 clock-icon">
           <svg
@@ -112,7 +120,7 @@ export default {
 }
 .container {
   justify-content: start;
-  align-items: center;
-  max-width: 600px;
+  align-items: flex-start;
+  max-width: 800px;
 }
 </style>

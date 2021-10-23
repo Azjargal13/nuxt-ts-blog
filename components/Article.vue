@@ -23,12 +23,15 @@
               d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
             />
           </svg>
-          <span v-for="item in post.tags" :key="item.id" class="m-0.5">
-            {{ item }} |
+          <span v-for="(item, id) in post.tags" :key="id" class="m-0.5">
+            {{ item }}
+            <span v-show="id !== post.tags.length - 1" class="mx-2">
+              |
+            </span>
           </span>
         </div>
 
-        <div class="mt-2 mr-2 clock-icon text-lg flex justify-end ">
+        <div class="mx-2 clock-icon text-lg flex justify-end ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-4 w-4 clock mt-1.5 mr-0.5"
@@ -45,7 +48,7 @@
           </svg>
           {{ formatTime(post.createdAt) }}
         </div>
-        <div v-if="post.image">
+        <div v-if="post.image" class="mt-2">
           <img
             :src="post.image"
             alt="img"
