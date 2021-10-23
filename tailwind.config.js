@@ -4,14 +4,30 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem'
+      padding: "2rem"
     },
-    extend: {}
+    fontFamily: {
+      sans: ["Quicksand",
+        "Source Sans Pro",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"]
+    },
+    extend: {
+      backgroundImage: {
+        hero: "url('assets/bg5.jpg')"
+      }
+    }
+
   },
   variants: {
     extend: {}
   },
   plugins: [
-    require('@tailwindcss/typography')
+    require("@tailwindcss/typography")
   ]
 }
