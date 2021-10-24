@@ -1,8 +1,10 @@
 <template>
   <div class="container">
     <section class="flex">
-      <article class="prose prose-sm lg:prose-xl sm:prose-sm">
-        <h1>About me: Who is Aza?</h1>
+      <article class="prose dark:prose-dark prose-sm lg:prose-xl sm:prose-sm">
+        <h1>
+          About me: Who is Aza?
+        </h1>
         <p>
           I'm someone who like to question things a lot and try to find answers
           by reading, observing, and listening.

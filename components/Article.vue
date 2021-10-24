@@ -1,6 +1,8 @@
 <template>
   <div class="article">
-    <section class=" prose prose-sm sm:prose lg:prose-lg mx-auto md:m-2">
+    <section
+      class=" prose dark:prose-dark prose-sm sm:prose lg:prose-lg mx-auto md:m-2"
+    >
       <article
         v-for="post in article"
         :key="post.id"

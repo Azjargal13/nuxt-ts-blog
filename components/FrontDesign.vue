@@ -1,19 +1,22 @@
 <template>
   <div
     id="hero"
-    class="bg-hero text-gray-600 bg-center bg-cover center bg-no-repeat h-full"
+    class=" text-gray-600 bg-center bg-cover center bg-no-repeat h-full"
+    :class="isLight ? 'bg-hero' : 'bg-hero-dark'"
   >
     <div>
       <navigation />
-      <h1 class="lg:text-8xl text-6xl p-8 ">
+      <h1 class="lg:text-8xl text-6xl p-8  dark:text-gray-400">
         {{ motto }}
       </h1>
-      <h2 class="lg:text-4xl sm:text-xl font-medium font-sans p-6 subtitle">
+      <h2
+        class="lg:text-4xl sm:text-xl font-medium font-sans p-6 subtitle dark:text-gray-200"
+      >
         Helloo, this is Azaa.
       </h2>
 
       <p
-        class=" absolute bottom-1 right-1 p-6 text-green-900 hover:text-green-500"
+        class=" absolute bottom-1 right-1 p-6 text-green-900 dark:text-white hover:text-green-500"
       >
         *If you like reading, go ahead and visit 'Tech blog' and 'Blog' section.
       </p>
@@ -35,6 +38,11 @@ export default {
       ],
       motto: "vivero memento"
     };
+  },
+  computed: {
+    isLight() {
+      return this.$colorMode.preference === "light";
+    }
   },
   mounted() {
     // this.updateMajor(this.major, this.delegate, 3000)
