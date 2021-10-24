@@ -54,5 +54,8 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  ssr: false
+  ssr: false,
+  colorMode: {
+    preference: "light" // default value of $colorMode.preference
+  }
 }
