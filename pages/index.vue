@@ -11,6 +11,11 @@ export default {
     return {
       page
     };
+  },
+  head() {
+    return {
+      title: "Aza | Welcome to Blog :)"
+    };
   }
 };
 </script>

@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  layout: "blog"
+  layout: "blog",
+  head() {
+    return { title: "Blog | Aza blog" };
+  }
 };
 </script>
 

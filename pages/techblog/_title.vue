@@ -14,6 +14,11 @@ export default {
     return {
       postPath: "techblog"
     };
+  },
+  head() {
+    return {
+      title: "Aza Blog |" + this.$route.params.title
+    };
   }
 };
 </script>

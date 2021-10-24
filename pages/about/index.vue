@@ -70,7 +70,10 @@
 
 <script>
 export default {
-  layout: "blog"
+  layout: "blog",
+  head() {
+    return { title: "About | Aza blog" };
+  }
 };
 </script>
 
