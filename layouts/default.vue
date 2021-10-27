@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nuxt />
-    <!-- <Footer /> -->
+    <Footer v-show="$route.path !== '/'" />
   </div>
 </template>
 <script>
