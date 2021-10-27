@@ -1,6 +1,6 @@
 <template>
   <div class="text-lg p-6  lg:flex lg:justify-center">
-    <div class="flex items-center justify-center dark:text-white ">
+    <div class="flex items-center justify-center dark:text-gray-200">
       <NuxtLink to="/" class="lg:mx-2 ">
         home
       </NuxtLink>

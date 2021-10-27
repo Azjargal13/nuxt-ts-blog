@@ -6,7 +6,7 @@
       <article
         v-for="post in article"
         :key="post.id"
-        class="shadow-md rounded p-4 md:p-12 shadow-2xl blog-article sm:p-12"
+        class="shadow-md rounded p-4 md:p-12 blog-article sm:p-12"
       >
         <h1 class="text-left">
           {{ post.title }}

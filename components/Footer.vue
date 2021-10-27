@@ -1,9 +1,7 @@
 <template>
   <div class="flex justify-center h-12 static bottom-0">
     <div class="divider flex flex-row justify-center">
-      <p class="prose lg:prose-lg dark:text-white text-center">
-        &copy; Aza in {{ date }}
-      </p>
+      <p class="prose dark:prose-dark text-center">&copy; Aza in {{ date }}</p>
     </div>
   </div>
 </template>
