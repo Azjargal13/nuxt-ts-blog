@@ -1,8 +1,5 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  router: {
-    mode: "hash"
-  },
   target: "static",
   loading: {
     color: "green",

@@ -5,7 +5,7 @@ module.exports = {
     "./pages/**/*.vue",
     "./nuxt.config.{js,ts}"
   ],
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     darkSelector: ".dark-mode",
     container: {
