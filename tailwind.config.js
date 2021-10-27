@@ -3,7 +3,8 @@ module.exports = {
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
-    "./nuxt.config.{js,ts}"
+    "./nuxt.config.{js,ts}",
+    "./assets/*"
   ],
   darkMode: "media", // or 'media' or 'class'
   theme: {
