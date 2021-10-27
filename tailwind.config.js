@@ -6,7 +6,7 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./assets/*"
   ],
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     darkSelector: ".dark-mode",
     container: {
@@ -31,6 +31,10 @@ module.exports = {
       },
       typography(theme) {
         return {
+          DEFAULT: {
+            css: {}
+          },
+
           dark: {
             css: {
               color: theme("colors.gray.300"),
