@@ -10,7 +10,7 @@
         {{ motto }}
       </h1>
       <h2
-        class="lg:text-4xl sm:text-xl font-medium font-sans p-6 subtitle dark:text-gray-200"
+        class=" dark:text-gray-300 lg:text-4xl sm:text-xl font-medium font-sans p-6 subtitle "
       >
         Helloo, this is Azaa.
       </h2>
