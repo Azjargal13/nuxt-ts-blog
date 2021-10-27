@@ -1,6 +1,5 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
   loading: {
     color: "green",
     height: "5px"
@@ -53,7 +52,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  ssr: false,
+  ssr: true,
   colorMode: {
     preference: "light" // default value of $colorMode.preference
   }
