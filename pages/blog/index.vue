@@ -6,15 +6,22 @@
 </template>
 
 <script>
-import fetchBlogArticles from "~/utils/fetchBlogArticles.js";
 export default {
   layout: "blog",
 
   async asyncData({ $content }) {
-    const content = await fetchBlogArticles($content);
+    const fiveArticles = await $content("blog")
+      .only(["title", "description", "slug", "tags", "createdAt"])
+      .sortBy("createdAt", "desc")
+      .limit(5)
+      .fetch();
+
+    const nextPage = fiveArticles.length === 5;
+    const articles = nextPage ? fiveArticles.slice(0, -1) : fiveArticles;
+
     return {
-      nextPage: content.nextPage,
-      articles: content.articles
+      nextPage,
+      articles
     };
   },
 

@@ -25,10 +25,6 @@ module.exports = {
         "sans-serif"]
     },
     extend: {
-      backgroundImage: {
-        hero: "url(https://res.cloudinary.com/ds9sourwm/image/upload/v1658024795/azjargal.me/bg5_ihuhqt.jpg)",
-        "hero-dark": "url(https://res.cloudinary.com/ds9sourwm/image/upload/v1658024796/azjargal.me/bg5-dark_f1l81j.png)"
-      },
       typography(theme) {
         return {
           DEFAULT: {

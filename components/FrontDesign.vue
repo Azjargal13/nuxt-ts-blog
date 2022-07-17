@@ -1,7 +1,8 @@
 <template>
   <section
     id="hero"
-    class=" text-gray-600 bg-center bg-cover center bg-no-repeat h-full "
+    class="text-gray-600 bg-center bg-cover center bg-no-repeat h-full"
+    :class="isLight ? 'light' : 'dark'"
   >
     <navigation />
     <h1 class="lg:text-8xl text-6xl p-8  dark:text-gray-400">
@@ -49,4 +50,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.light {
+  background-image: url(https://res.cloudinary.com/ds9sourwm/image/upload/v1658024795/azjargal.me/bg5_ihuhqt.jpg);
+}
+.dark {
+  background-image: url(https://res.cloudinary.com/ds9sourwm/image/upload/v1658024796/azjargal.me/bg5-dark_f1l81j.png);
+}
+</style>
