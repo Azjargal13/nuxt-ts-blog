@@ -8,14 +8,16 @@
 <script>
 export default {
   layout: "blog",
-
-  async asyncData({ $content }) {
+  async asyncData({ $content, error }) {
     const fiveArticles = await $content("techblog")
       .only(["title", "description", "slug", "tags", "createdAt"])
       .sortBy("createdAt", "desc")
       .limit(5)
       .fetch();
 
+    if (!fiveArticles.length) {
+      return error({ statusCode: 404, message: "No articles found!" });
+    }
     const nextPage = fiveArticles.length === 5;
     const articles = nextPage ? fiveArticles.slice(0, -1) : fiveArticles;
 

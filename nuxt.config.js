@@ -55,6 +55,7 @@ export default {
   ssr: true,
   colorMode: {
     preference: "light" // default value of $colorMode.preference
-  }
+  },
+  target: "static"
 
 }

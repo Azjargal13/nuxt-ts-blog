@@ -1,6 +1,5 @@
 <template>
   <section>
-    {{ pageNo }}
     <blog-list path="techblog" :articles="articles" />
     <Pagination
       :prev-page="pageNo > 1"
@@ -8,6 +7,7 @@
       :page-no="pageNo"
       url-prefix="/techblog"
     />
+    Page {{ pageNo }}
   </section>
 </template>
 <script>
