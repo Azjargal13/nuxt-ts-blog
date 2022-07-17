@@ -1,5 +1,5 @@
-export default async ($content, dirName) => {
-  const fiveArticles = await $content(dirName)
+export default async ($content) => {
+  const fiveArticles = await $content("blog")
     .only(["title", "description", "slug", "tags", "createdAt"])
     .sortBy("createdAt", "desc")
     .limit(5)

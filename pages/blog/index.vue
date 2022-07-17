@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import fetchArticles from "~/utils/fetchArticles.js";
+import fetchBlogArticles from "~/utils/fetchBlogArticles.js";
 export default {
   layout: "blog",
 
   async asyncData({ $content }) {
-    const content = await fetchArticles($content, "blog");
+    const content = await fetchBlogArticles($content);
     return {
       nextPage: content.nextPage,
       articles: content.articles
