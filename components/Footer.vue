@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      createdAt: new Date().getFullYear()
+      date: new Date().getFullYear()
     };
   }
 };
