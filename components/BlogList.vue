@@ -1,6 +1,6 @@
 <template>
   <div class="container flex flex-col divide-y-2 w-full divide-green-500">
-    <div v-for="post in fewPosts" :key="post.id" class="blog-list p-6 w-full ">
+    <div v-for="post in articles" :key="post.id" class="blog-list p-6 w-full ">
       <div class="blog-col">
         <NuxtLink :to="post.path" class="hover:text-green-500">
           <ul class="lg:text-xl font-medium sm:text-lg mb-2">
@@ -32,20 +32,6 @@
               |
             </span>
           </span>
-          <!-- slack tag icon -->
-          <!-- <svg
-            class="h-6 w-6"
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              fill="currentColor"
-              d="M446.2 270.4c-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-30.3-90 45.4-15.1c19.1-6.2 29.1-26.8 23-45.9-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-93.4 31.2-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-45.3 15c-19.1 6.2-29.1 26.8-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l30.3 90L78 354.8c-19 6.2-29.1 26.9-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 93.6-31.3 15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 45.4-15.1c19-6 29.1-26.7 22.9-45.7zm-254.1 47.2l-30.3-90.2 93.5-31.3 30.3 90.2-93.5 31.3z"
-            ></path>
-          </svg> -->
         </div>
         <div class="mt-4 clock-icon">
           <svg
@@ -76,36 +62,15 @@ export default {
     path: {
       type: String,
       required: true
+    },
+    articles: {
+      type: Array,
+      required: true
     }
-  },
-  data() {
-    return {
-      articles: [],
-      fewPosts: [],
-      next: {}
-    };
-  },
-  mounted() {
-    // this.articles = await this.$content(this.path).fetch();
-    this.fetchFewPosts().then(values => {
-      this.fewPosts = values.posts;
-      this.next = values.nextPage;
-    });
   },
   methods: {
     formatTime(value) {
       return moment(value).format("MMMM Do YYYY");
-    },
-    async fetchFewPosts() {
-      const fewPosts = await this.$content(this.path)
-        .only(["createdAt", "path", "title", "tags"])
-        .sortBy("createdAt", "desc")
-        // .limit(10)
-        .fetch();
-
-      const nextPage = fewPosts.length === 5;
-      const posts = nextPage ? fewPosts.slice(0, -1) : fewPosts;
-      return { nextPage, posts };
     }
   }
 };
