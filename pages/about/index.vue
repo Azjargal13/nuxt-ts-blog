@@ -3,7 +3,7 @@
     <section class="flex">
       <article class="prose dark:prose-dark prose-sm lg:prose-xl sm:prose-sm">
         <h1>
-          About me: Who is Aza?
+          About me: Who is Azaa?
         </h1>
         <p>
           I'm someone who like to question things a lot and try to find answers
@@ -72,7 +72,7 @@
 export default {
   layout: "blog",
   head() {
-    return { title: "About | Aza blog" };
+    return { title: "About | Azaa blog" };
   }
 };
 </script>

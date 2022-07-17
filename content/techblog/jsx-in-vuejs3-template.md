@@ -3,9 +3,8 @@ title: Writing JSX in Vuejs3 component | Render function usage in the template
 description: Vuejs3 gives option to write components in JSX style. This is interesting way to understand how those frameworks blend it other to produce view on browsers.
 tags: ["vuejs3", "jsx", "template"]
 label: [techblog, techie]
-image: https://source.unsplash.com/random/600x450
 createdAt: April, 21, 2021
-author: Aza
+author: Azaa
 ---
 
 This is interesting way of understanding the relations of Vuejs and React framework. Both of them have wide range of users rely on the framework consistency and delivers from easy project to interprise level projects.

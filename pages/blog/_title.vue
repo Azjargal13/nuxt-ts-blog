@@ -17,7 +17,7 @@ export default {
   },
   head() {
     return {
-      title: "Aza Blog |" + this.$route.params.title
+      title: "Azaa Blog |" + this.$route.params.title
     };
   }
 };

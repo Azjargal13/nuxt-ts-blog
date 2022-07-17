@@ -5,7 +5,7 @@ tags: ["education", "video-interview", "talk"]
 label: [free-time, writing]
 image: https://source.unsplash.com/TKz4lU3Npa4/640x853
 createdAt: April, 20, 2021
-author: Aza
+author: Azaa
 ---
 
 I am always been a fan of Yuval Noah Harari, the historian and author of "Sapiens" book (as you'd might known already) and Daniel Kanheman, the Nobel laureate on Economic Science in 2002, also the author of "Thinking fast, and slow" book (surely you might have heard about it too).

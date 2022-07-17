@@ -5,7 +5,7 @@ tags: ["environment", "climate change", "nature"]
 label: [free-time, writing]
 image: https://source.unsplash.com/random/600x450
 createdAt: April, 26, 2021
-author: Aza
+author: Azaa
 ---
 
 We all hear, read and sometimes discuss about "Climate change" and its consequences. Yet still not fully understand why this is important to share and help others to get familiar with it. Maybe because most of us, have not yet feel the "climate change" or some sudden ups and downs of the natural events.

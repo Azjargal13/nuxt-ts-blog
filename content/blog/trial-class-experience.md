@@ -5,7 +5,7 @@ tags: ["education", "class", "mba"]
 label: [free-time, writing]
 image: "https://github.com/Azjargal13/nuxt-ts-blog/blob/master/assets/blog-writing.jpg"
 createdAt: Oct, 30, 2021
-author: Aza
+author: Azaa
 ---
 
 A while ago, I have an opportunity to attend MBA online trial class on Design Thinking course at GLOBIS University. Even it's only a trial class I've noticed quite a pattern among attendees, so'd like to summarize my personal experience and thought about what really mid-career MBA students expect.
@@ -45,4 +45,4 @@ There is no wonder why we don't like the same repetitive routine and deep in our
 Alright, if you've read till here I bet you also want to do either of these :)
 Go ahead and let's learn more and after acquiring some knowledge let's share it to others too.
 
-~Aza
+~Azaa

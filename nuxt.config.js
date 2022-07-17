@@ -13,8 +13,8 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "Aza, Azaa, Azjargal, Azjargal Gankhuyag" },
-      { name: "keywords", content: "aza blog, azaa's blog, azaa's writing, tech-blog, aza tech blog" },
+      { name: "author", content: "Azaa, Azaa, Azjargal, Azjargal Gankhuyag" },
+      { name: "keywords", content: "Azaa blog, azaa's blog, azaa's writing, tech-blog, Azaa tech blog" },
       { hid: "description", name: "description", content: "Azaa's personal blog for sharing tech and non-tech short articles and thoughts, some knowledge sharing activity purpose" }
     ],
     link: [

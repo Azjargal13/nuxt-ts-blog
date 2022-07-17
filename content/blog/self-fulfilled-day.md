@@ -5,7 +5,7 @@ tags: ["reflection", "productivity"]
 label: [free-time, writing]
 image: https://source.unsplash.com/random/600x450
 createdAt: April, 29, 2021
-author: Aza
+author: Azaa
 ---
 
 So satisfying this feeling, have done something interesting and self sufficient for today's productivity. Honestly speaking today was somewhat different than my usual working routine, maybe that caused me high energy which brought satisfaction as well.

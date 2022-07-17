@@ -8,7 +8,7 @@
 export default {
   layout: "blog",
   head() {
-    return { title: "TechBlog | Aza blog" };
+    return { title: "TechBlog | Azaa blog" };
   }
 };
 </script>

@@ -14,7 +14,7 @@ export default {
   },
   head() {
     return {
-      title: "Aza | Welcome to Blog :)"
+      title: "Azaa | Welcome to Blog :)"
     };
   }
 };

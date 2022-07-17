@@ -5,7 +5,7 @@ tags: ["education", "documentary"]
 label: [free-time, writing]
 image: https://image.tmdb.org/t/p/w185/cLwQRXfzPjmpU6I78TCkoHazO0A.jpg
 createdAt: April, 19, 2021
-author: Aza
+author: Azaa
 ---
 I am writing short post about what I felt after watching the latest (as of now, by April/2021) pandemic time documentary. The content duration is about +48mins, produced in the UK. (narrated by the award winning narrator :P)
 

@@ -5,7 +5,7 @@ tags: ["education", "documentary"]
 label: [free-time, writing]
 image: https://source.unsplash.com/random/600x450
 createdAt: April, 20, 2021
-author: Aza
+author: Azaa
 ---
 
 Go ahead and write simply :)
