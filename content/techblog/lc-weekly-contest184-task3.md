@@ -11,10 +11,10 @@ tags:
 ---
 This post is continuation of LC weekly contest 184, task 1 is published [here](./lc-weekly-contest184-task1.md), and task 2 is published [here](./lc-weekly-contest184-task2.md).
 
-
-# Task 3: 1410. HTML Entity Parser (medium level)
+## Task 3: 1410. HTML Entity Parser (medium level)
 
 ## Problem statement
+
 `LC-no 1410. HTML Entity Parser (medium level)`
 
 HTML entity parser is the parser that takes HTML code as input and replace all the entities of the special characters by the characters itself.
@@ -31,35 +31,45 @@ The special characters and their entities for HTML are:
 
 Return the text after replacing the entities by the special characters.
 Example 1:
+
 ```
 Input: text = "&amp; is an HTML entity but &ambassador; is not."
 Output: "& is an HTML entity but &ambassador; is not."
 Explanation: The parser will replace the &amp; entity by &
 ```
+
 Example 2:
+
 ```
 Input: text = "and I quote: &quot;...&quot;"
 Output: "and I quote: \"...\"" 
 ```
+
 Example 3:
+
 ```
 Input: text = "Stay home! Practice on Leetcode :)"
 Output: "Stay home! Practice on Leetcode :)"
 ```
+
 Example 4:
+
 ```
 Input: text = "x &gt; y &amp;&amp; x &lt; y is always false"
 Output: "x > y && x < y is always false"
 ```
+
 Example 5:
+
 ```
 Input: text = "leetcode.com&frasl;problemset&frasl;all"
 Output: "leetcode.com/problemset/all"
 ```
+
 Constraints:
+
 - 1 <= text.length <= 10^5
 - The string may contain any possible characters out of all the 256 ASCII characters.
-
 
 ## Solution
 
@@ -67,7 +77,8 @@ This problem was comparatively easy level despite being tagged as medium level.
 Maybe because of language advantage it was pretty easy. All have to do is replace string with given character.
 
 ### Algorithm
-- replace `'&quot;'` to `'"'` 
+
+- replace `'&quot;'` to `'"'`
 - replace `'&apos;'` to `"'"`
 - replace `"&amp;"` to `"&"`
 - replace `"&gt;"` to `">"`

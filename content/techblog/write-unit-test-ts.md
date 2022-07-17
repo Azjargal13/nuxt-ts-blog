@@ -29,7 +29,7 @@ In order to run our test code, we can add script in package.json. Open `package.
 Now it's time to write first test code.
 Before jumping to write a code, the test file should be named as `xyz.test.js`.
 
-# Sample unit test code
+## Sample unit test code
 
 Let's say we have a following `.js` file which contains a function named `convertToStr`.
 

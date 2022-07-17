@@ -10,7 +10,7 @@ tags:
 - vuejs
 ---
 
-# What is storybook?
+## What is storybook?
 
 Well, if you work as FE developer, then storybook or simply generating stories is part of your job and its super useful, since it loads independent components into the browser so we can visually interact with components not writing any extra codes.
 
@@ -18,7 +18,7 @@ If you first time reading about storybook, for sure you should visit their offic
 
 Plus, it supports most of the popular front-end development framework such as React, Vue, Angular etc.
 
-# Why use storybook-addon-docs?
+## Why use storybook-addon-docs?
 
 Surely, we've spent most of our dev time staring at numerous components trying to remember what it does, what's is transmitted values mainly props etc.
 
@@ -28,13 +28,13 @@ If you using storybook below `@storybook5.2` version, this feature is not added,
 
 This package provides auto created documentation for your component without requiring additional effort. The docs are generated automatically, hence their styling is default. If you want to prepare your documentation more detail, additionally `markdown` syntax generator or `MDX` will help.
 
-# How to start using docs?
+## How to start using docs?
 
 I am assuming that you've already read about `storybook` and install it in the project you've working on.
 
 Just for information matter, as mentioned before it is not included in `@storybook^4.0` or below `@storybook5.2`. So please update its latest version.
 
-# Let's use `storybook-addon-docs`
+## Let's use `storybook-addon-docs`
 
 1. Install storybook addon docs through `npm` or `yaml`.
    

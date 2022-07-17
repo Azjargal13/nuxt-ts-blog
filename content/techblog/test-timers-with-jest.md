@@ -8,7 +8,7 @@ tags:
 - jest
 - test-timers
 ---
-# Introduction
+## Introduction
 
 Native timers are widely used and its use cases are wide. Such as for updating particular page every x seconds, or every x interval refresh the page etcs.
 
@@ -16,7 +16,7 @@ Native timers are widely used and its use cases are wide. Such as for updating p
 
 Below I will provide sample code which uses jest fake timers to run the function and passes test case.
 
-# Sample code 
+## Sample code 
 
 ```js
 // draw.js
@@ -29,7 +29,7 @@ draw(){
 }
 ```
 
-## Sample test code
+### Sample test code
 
 ```js
 // draw.spec.js

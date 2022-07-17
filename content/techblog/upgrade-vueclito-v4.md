@@ -14,7 +14,7 @@ Lately, in Dec, 2019 their version 4.1.2 is released that has some really good u
 
 First of all, I will briefly go through latest updates of `vue-cli@4.1.2`, then will share some good practice to upgrade or migrate from version 3 to version 4 without producing error.
 
-# Latest updates of `vue-cli@^4`
+## Latest updates of `vue-cli@^4`
 
 - Vue config 
 - Babel config
@@ -24,7 +24,7 @@ First of all, I will briefly go through latest updates of `vue-cli@4.1.2`, then 
 As an user of the tool, main updates are reflected in our daily config file such as vue,babel,and jest config.
 By upgrading the latest version, the config of above files seem way faster and easy to understand, also setup its config.
 
-# Way to migrate to `vue-cli@^4`
+## Way to migrate to `vue-cli@^4`
 
 Before upgrading vue-cli, it is advised to check its version installed in your system. For that, run the following command.
 
@@ -33,7 +33,7 @@ Before upgrading vue-cli, it is advised to check its version installed in your s
 After that you'll see similar to `@vue/cli@3.x.x`.
 If it is shows as a version 3, we can upgrade to version 4.
 
-## Upgrade all plugins
+### Upgrade all plugins
 
 You can upgrade all plugins or dependencies which is in your project by running 
 
@@ -41,7 +41,7 @@ You can upgrade all plugins or dependencies which is in your project by running
 
 But this is sometimes really powerful and update all the packages related to `@vue/cli`. So before running the command, make sure which all dependencies are about to update. Is there any complicated config or external setup you've been set lately. Make sure to check those and run this command.
 
-## Upgrade by plugins
+### Upgrade by plugins
 
 This approach better if you know the exact plugins or package that should be upgraded. In this case, we can upgrade `@vue-cli` by running following command.
 

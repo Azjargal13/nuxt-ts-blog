@@ -11,16 +11,19 @@ tags:
 
 There could many cases where we need to listen events that is emitted from server side. In order words, we have to listen server-sent-event (sse).
 Before that it is essential to know how the event is activated and operates in window object.
-# Server-sent-events
+
+## Server-sent-events
+
 In the front-end, we should have a service where it listens the event from server and act based on that. For that we need to use `EventSource` interface, to open the connection to the server, so it can receive its event information.
 
-# EventSource interface
+## EventSource interface
+
 `EventSource` is kind of interface to the server-sent-events. It opens persistent HTTP server that sends events in `text/event-stream` format.
-The connection need to be closed by calling EventSource.close(), otherwise it will be remain as open till the window or DOM destroyed (redirect the window or close the tab). 
+The connection need to be closed by calling EventSource.close(), otherwise it will be remain as open till the window or DOM destroyed (redirect the window or close the tab).
 
 Unlike `WebSockets`, SSE events are unidirectional (one direction), from server to client side.
 
-# Receiving events from server
+## Receiving events from server
 
 ```js
 // sse-service.js
@@ -38,6 +41,7 @@ function eventSuccess(){
 // close event connection
 eventSource.close()
 ```
+
 additionally, we can add event handlers such as `onmessage`, `onerror` when receiving event.
 
 ```js
@@ -65,14 +69,14 @@ const eventSource = new EventSource("//api.example.com/ssedemo.php",
     { withCredentials: true } ); // specify option in {}
 ```
 
-# Event stream format
+## Event stream format
 
 Events sent from server divides into following label. Those messages are normal stream of text, which must be encoded using `UTF-8`
 
 Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.
 
- - data-only messages
- - named events
+- data-only messages
+- named events
 
 ## Data-only messages
 
@@ -88,7 +92,8 @@ data: with two lines
 Only `data:` field is given, there is no named events.
 
 ## Named events
- Each has an event name specified by the `event` field, and a `data` field whose value is an appropriate JSON string with the data needed for the client to act on the event. 
+
+ Each has an event name specified by the `event` field, and a `data` field whose value is an appropriate JSON string with the data needed for the client to act on the event.
 
 ```js
 event: userconnect
@@ -113,5 +118,5 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 Alright, this section might give you some understanding.
 If you want to see more detailed info, please go and check this followings.
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events
-- https://developer.mozilla.org/en-US/docs/Web/API/EventSource
+- <https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events>
+- <https://developer.mozilla.org/en-US/docs/Web/API/EventSource>

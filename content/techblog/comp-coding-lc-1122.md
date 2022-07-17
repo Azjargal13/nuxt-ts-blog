@@ -5,7 +5,7 @@ label: [Competitive coding]
 tags: [leetcode,sort,array,python3]
 ---
 
-# [Leetcode] 1122 (easy level): Relative sort array
+## [Leetcode] 1122 (easy level): Relative sort array
 
 Recently I've developed much interest for competitive coding and leetcode is really good place to practice and learn from others as well.
 

@@ -17,6 +17,7 @@ export default {
       articles: content.articles
     };
   },
+
   head() {
     return { title: "TechBlog | Azaa blog" };
   }

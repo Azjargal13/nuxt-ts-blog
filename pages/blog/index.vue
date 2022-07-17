@@ -9,14 +9,15 @@
 import fetchArticles from "~/utils/fetchArticles.js";
 export default {
   layout: "blog",
+
   async asyncData({ $content }) {
     const content = await fetchArticles($content, "blog");
-
     return {
       nextPage: content.nextPage,
       articles: content.articles
     };
   },
+
   head() {
     return { title: "Blog | Azaa blog" };
   }

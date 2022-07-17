@@ -9,7 +9,7 @@ tags:
 - nightwatch
 ---
 
-Let's dive more into NightWatchJs end-to-end testing tool by installing it first and set config. 
+Let's dive more into NightWatchJs end-to-end testing tool by installing it first and set config.
 
 Before following the steps, encouraging you to first visit their official site and have base knowledge or getting familiar with the tool. Please redirect [here](https://nightwatchjs.org/).
 
@@ -22,8 +22,9 @@ Adding this package and run on the project is not hard part. It is just a matter
 Assuming that you've already have `nodejs` installed in your system, as NightwatchJs is written in NodeJs, hence it required to be installed beforehand.
 
 In order to run nightwatch, it's required to install 2 different packages.
- 1.  Nightwatch (through `npm` command line tool)
- 2.  WebDriver (Chrome, Firefox, Edge, IE etc., )
+
+ 1. Nightwatch (through `npm` command line tool)
+ 2. WebDriver (Chrome, Firefox, Edge, IE etc., )
 
 ### Installing Nightwatch
 
@@ -33,7 +34,7 @@ As mentioned earlier, we can run following command and install nightwatch in our
 
 ### Installing WebDriver
 
-Depend on the project testing requirement, free to select any browser that automatic tests can run. 
+Depend on the project testing requirement, free to select any browser that automatic tests can run.
 
 Providing a table to refer which driver to install based on browser.
 
@@ -53,15 +54,17 @@ Last time, even chrome driver installed, it shows warning says geckodriver shoul
 `npm install geckodriver --save-dev`
 
 So far so good, all required packages are installed.
+
 ## Configuration
 
 After installing `nightwatch`, config json file named `nightwatch.conf.js` is generated automatically by default. And can be found in the root dir. (`/src`)
 
-We can create another file named `nightwatch.json` and by default nightwatch will load conf.js file. 
+We can create another file named `nightwatch.json` and by default nightwatch will load conf.js file.
 
 Config part is not complicated, we just need to select which browser will be used during automatic test and set its path or server path to run the execution command. Also, specify port number and test folder.
 
 Following is how my `nightwatch.json` file looks like:
+
 ```json
 {
     "src_folders" : ["tests/e2e/"],
@@ -88,6 +91,7 @@ As mentioned before, we can set default browser that automatic test can run. In 
  I created separate `nightwatch.conf.js` file which only include web driver path via importing.
 
   Here is how my `nightwatch.conf.js` file looks file:
+
 ```js
 const chromedriver = require("chromedriver");
 module.exports = (function(settings) {
@@ -97,22 +101,22 @@ module.exports = (function(settings) {
 })(require("./nightwatch.json"));
 ```
 
-
   In conf.js file, driver path is imported and we need to simply fill correct path in `webdriver.server_path` object.
 
 ### Running test
-Additionally, for running tests we can write executable script in `package.json` 's `script` section. 
 
-Or, can run test as follows in project specific manner. 
+Additionally, for running tests we can write executable script in `package.json` 's `script` section.
 
-`./node_modules/.bin/nightwatch testfile `
+Or, can run test as follows in project specific manner.
+
+`./node_modules/.bin/nightwatch testfile`
 
 It is convenient to include `nightwatch` in package.json.
 In this case, we can run test as follows.
 
 `npm run nightwatch testfile`
 
-Single or multiple test files can be run together. For example, 
+Single or multiple test files can be run together. For example,
 `npm run nightwatch testfile1 testfile2`
 
 And if you thinking to read more about it, encouraging to visit official site and look around `Developer Guide` and `API Reference` section.

@@ -16,19 +16,19 @@ So by now, version of the storybook have been updated till `storybook@5.3.8`. Ea
 So what is really boom updates or features that introduced so far?
 Here I'm providing some important ones to check it out and reflect in your project accordingly.
 
-# Auto generated documentation 
+## Auto generated documentation 
 
 Yes, this is super helpful, as number of components are increased, it should be easy to track and determine how its data flows.
 
 By just installing `storybook/addon-docs` and set its config, we can see newly generated documentation for us!. Thanks for this feature.
 
-# Way easier to write documentation using MDX
+## Way easier to write documentation using MDX
 
 Also, MDX `markdown syntax` is supported for writing more detailed kind of documentation which includes some graph/analytics, code snippets. Reason is auto generated docs generate general type of docs (all same types), so it is easy to edit and maintain using mdx.
 
 For this feature, it is required to install additional packages which extracts and loads of the components into easy to compile for markdown syntax.
 
-# No more many config files to maintain, maybe a single file (main.js)
+## No more many config files to maintain, maybe a single file (main.js)
 
 Previously, `config.js`, `addons.js` if required `presets.js` are must to be exist. It is not great to deal with multiple config files because simply we can make mistakes or forget some changes to add. As a result, it keeps throwing errors.
 
@@ -36,7 +36,7 @@ But now, later of `storybook@5.3.0` version, a single file `main.js` can include
 
 If required additional config files such as `manager.js`, `preview.js` can be created. But most of the time `main.js` is enough to run.
 
-# New format for writing stories
+## New format for writing stories
 
 It gets more easier and easier to write stories. Earlier versions, (but we can still use) `storiesOf` was default format to write stories, but not they've introduced `Component Story Format` simply `CSF`. It's based on ES6 module, so it can written as `export default {}`. Now this `CSF` is a default format to write stories according to their official website.
 

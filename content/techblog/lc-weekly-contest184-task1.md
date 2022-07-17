@@ -11,34 +11,41 @@ tags:
 ---
 
 
-# Task 1: LC 1408. String Matching in an Array (Easy level)
+## Task 1: LC 1408. String Matching in an Array (Easy level)
 
 ## Problem statement
-` LC 1408. String Matching in an Array (Easy level)`
 
-Given an array of string words. Return all strings in words which is substring of another word in any order. 
+`LC 1408. String Matching in an Array (Easy level)`
+
+Given an array of string words. Return all strings in words which is substring of another word in any order.
 
 String words[i] is substring of words[j], if can be obtained removing some characters to left and/or right side of words[j].
 Example 1:
+
 ```
 Input: words = ["mass","as","hero","superhero"]
 Output: ["as","hero"]
 Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
 ["hero","as"] is also a valid answer.
 ```
+
 Example 2:
+
 ```
 Input: words = ["leetcode","et","code"]
 Output: ["et","code"]
 Explanation: "et", "code" are substring of "leetcode".
 ```
+
 Example 3:
+
 ```
 Input: words = ["blue","green","bu"]
 Output: []
 ```
 
 Constraints:
+
 - 1 <= words.length <= 100
 - 1 <= words[i].length <= 30
 - words[i] contains only lowercase English letters.
@@ -49,10 +56,11 @@ Constraints:
 The problem is related to substring, so we can simply compare given string is substring of any string. For that we need two loops, one for running each words of given string array, and another loop for keep comparing whether the string is substring of any string.
 
 ### Algorithm
+
 - create an empty res[].
 - run for loop of each string in array
 - run another for loop for again each string of array
-- compare whether index elem of inner loop and index elem of outer loop is different (same words are not substring of each other) 
+- compare whether index elem of inner loop and index elem of outer loop is different (same words are not substring of each other)
   - if not same, check whether elem of outer loop is substring of elem of inner loop. If the string is substring, store to res[] and break the loop.
 
 ### Implementation

@@ -12,7 +12,7 @@ tags:
 As a FE developer, we have often times have to work with native HTML DOM elements, and manipulate or set its values to our desired one.
 All the page related component's elements are absolutely using native HTML DOM elems after it is parsed and read as Javascript. However, different types of FE frameworks are available in current development environment and it is already included all the HTML elems into their own UI components with their pretty CSS config. Due to that, sometimes it is not necessary to work on native HTML elements.
 
-Even though we've numerous choice of elements which can be used in our project. So I've selected `<video>` element to write about today, because most of the time video included in many projects and native HTML DOM properties give us a lof of opportunities to set its config as we want to display or play the video. 
+Even though we've numerous choice of elements which can be used in our project. So I've selected `<video>` element to write about today, because most of the time video included in many projects and native HTML DOM properties give us a lof of opportunities to set its config as we want to display or play the video.
 
 ## HTML DOM `<video>` element
 
@@ -20,7 +20,6 @@ Major video playing and streaming application use the element, including `Youtub
 
 It has number of properties can be set and controlled the way we want.
 Detailed information refer Mozilla's [page.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Technical_summary)
-
 
 ## About event comparison
 
@@ -30,6 +29,6 @@ Detailed information refer Mozilla's [page.](https://developer.mozilla.org/en-US
 | loadedData | just load video frame, in this case video properties  can be configured before the video gets played                               |
 | process    | after loading video frame, it is processed to buffer video data (video properties  can be configured before the video gets played) |
 
-The event listening plays important rules if you want to manipulate video's data. For example, onCanPlay play videos at rate of 2.(twice as faster than normal speed of video ) or invoke another function to work with video etc. 
+The event listening plays important rules if you want to manipulate video's data. For example, onCanPlay play videos at rate of 2.(twice as faster than normal speed of video ) or invoke another function to work with video etc.
 
 More info, visit <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video>.
