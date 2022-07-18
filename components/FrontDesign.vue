@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
-#id {
-  min-height: 100vh;
+section {
+  height: 100vh;
 }
 </style>
