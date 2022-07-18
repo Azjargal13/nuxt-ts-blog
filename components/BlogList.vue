@@ -60,15 +60,13 @@
 import moment from "moment";
 export default {
   props: {
-    path: {
-      type: String,
-      required: true
-    },
     articles: {
       type: Array,
       required: true
     }
   },
+
+  mounted() {},
   methods: {
     formatTime(value) {
       return moment(value).format("MMMM Do YYYY");

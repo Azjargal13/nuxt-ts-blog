@@ -7,7 +7,7 @@
       :page-no="pageNo"
       url-prefix="/blog"
     />
-    Page {{ pageNo }}
+    <p class="pagination">Page {{ pageNo }}</p>
   </section>
 </template>
 <script>
@@ -34,3 +34,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.pagination {
+  text-align: center;
+}
+</style>
