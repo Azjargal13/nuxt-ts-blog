@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "parser": "eslint-parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": [
+    "@nuxtjs"
+  ],
+  "rules": {
+    "consistent-return": 2,
+    "indent": 2,
+    "no-else-return": 1,
+    "semi": "off",
+    "space-unary-ops": 2,
+    "no- tabs": 0,
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "space-before-function-paren": 0,
+    "vue/html-self-closing": 0,
+    "arrow-parens": 0,
+    "no-unused-vars": "off"
+  }
+}

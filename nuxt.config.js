@@ -1,3 +1,4 @@
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   loading: {
@@ -56,6 +57,6 @@ export default {
   colorMode: {
     preference: "light" // default value of $colorMode.preference
   },
-  target: "server"
+  target: "static"
 
 }
