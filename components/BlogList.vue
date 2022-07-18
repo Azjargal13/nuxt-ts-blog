@@ -60,10 +60,6 @@
 import moment from "moment";
 export default {
   props: {
-    path: {
-      type: String,
-      required: true
-    },
     articles: {
       type: Array,
       required: true

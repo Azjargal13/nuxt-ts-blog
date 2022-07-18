@@ -56,6 +56,6 @@ export default {
   colorMode: {
     preference: "light" // default value of $colorMode.preference
   },
-  target: "static"
+  target: "server"
 
 }

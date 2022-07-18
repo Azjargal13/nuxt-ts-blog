@@ -1,7 +1,8 @@
 <template>
   <div>
-    <blog-list path="techblog" :articles="articles" />
-    <Pagination :next-page="nextPage" :page-no="1" url-prefix="/techblog" />
+    Hey!!
+    <blog-list :articles="articles" />
+    <Pagination :next-page="nextPage" :page-no="1" />
   </div>
 </template>
 
