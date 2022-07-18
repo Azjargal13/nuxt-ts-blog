@@ -13,10 +13,8 @@
 <script>
 export default {
   layout: "blog",
-
   async asyncData({ $content, params, error }) {
     const pageNo = parseInt(params.number);
-
     const fiveArticles = await $content("blog")
       .only(["createdAt", "path", "title", "tags"])
       .sortBy("createdAt", "desc")

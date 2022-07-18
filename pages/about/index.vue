@@ -40,7 +40,11 @@
         photos
       </p>
       <div class="shadow-md flex justify-center">
-        <img src="~/assets/editedAza.jpg" alt="me" class="p-6  lg:w-2/3" />
+        <img
+          src="https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg"
+          alt="me"
+          class="p-6  lg:w-2/3"
+        />
       </div>
 
       <p class="text-xl font-medium">

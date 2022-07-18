@@ -65,6 +65,8 @@ export default {
       required: true
     }
   },
+
+  mounted() {},
   methods: {
     formatTime(value) {
       return moment(value).format("MMMM Do YYYY");
