@@ -1,21 +1,15 @@
 <template>
-  <div class="text-lg p-6  lg:flex lg:justify-center">
+  <div class="text-lg p-6 lg:flex lg:justify-center">
     <div class="flex items-center justify-center dark:text-gray-200">
-      <NuxtLink to="/" class="lg:mx-2 ">
-        home
-      </NuxtLink>
+      <NuxtLink to="/" class="lg:mx-2"> home </NuxtLink>
       |
-      <NuxtLink to="/techblog" class="lg:mx-4 mx-2">
-        tech blog
-      </NuxtLink>
+      <NuxtLink to="/interview" class="lg:mx-4 mx-2"> interview </NuxtLink>
       |
-      <NuxtLink to="/blog" class="lg:mx-4 mx-2">
-        blog
-      </NuxtLink>
+      <NuxtLink to="/techblog" class="lg:mx-4 mx-2"> tech blog </NuxtLink>
       |
-      <NuxtLink to="/about" class="lg:mx-4 ">
-        about
-      </NuxtLink>
+      <NuxtLink to="/blog" class="lg:mx-4 mx-2"> blog </NuxtLink>
+      |
+      <NuxtLink to="/about" class="lg:mx-4"> about </NuxtLink>
     </div>
     <div class="flex items-center justify-center p-6">
       <a
@@ -24,7 +18,7 @@
         target="_blank"
         title="Follow me on github @Azjargal13"
       >
-        <span class="inline-block w-4 mr-1 ">
+        <span class="inline-block w-4 mr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -39,12 +33,12 @@
         </span>
       </a>
       <a
-        class="group flex items-center mx-2 text-gray-600 dark:text-white   hover:text-green-400"
+        class="group flex items-center mx-2 text-gray-600 dark:text-white hover:text-green-400"
         href="https://www.linkedin.com/in/azjargal-gankhuyag/"
         target="_blank"
         title="Connect me on LinkedIn"
       >
-        <span class="inline-block w-4 mr-1 ">
+        <span class="inline-block w-4 mr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -64,7 +58,7 @@
         target="_blank"
         title="Email me"
       >
-        <span class="inline-block w-4 mr-1 ">
+        <span class="inline-block w-4 mr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -120,14 +114,14 @@ export default {
   computed: {
     isLight() {
       return this.$colorMode.preference === "light" ? "light" : "dark";
-    }
+    },
   },
   methods: {
     toggleColor() {
       this.$colorMode.preference =
         this.$colorMode.preference === "light" ? "dark" : "light";
-    }
-  }
+    },
+  },
 };
 </script>
 

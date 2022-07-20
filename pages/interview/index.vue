@@ -1,24 +1,22 @@
 <template>
   <div>
     <h1 class="text-2xl text-center p-2 font-medium text-green-600 underline">
-      Personal Blog: Things I'd like to express after reflecting
+      SPARK: All about career paths and opportunities
     </h1>
-    <blockquote
-      class="md:w-1/2 mx-auto text-center p-4 italic border-l-8 bg-neutral-100 text-neutral-600 border-neutral-500 quote"
-    >
-      “Your life is a reflection of your thoughts. If you change your thinking,
-      you change your life.” Brian Tracy
-    </blockquote>
     <p class="text-base text-left md:w-1/2 p-2 mx-auto">
-      Basically topics not related with "careers, work, and technology".
+      For helping you and I, and other tech industry professionals seeking
+      growth and support from their community, as well as expansion of the
+      network, I will be interviewing mid-career & senior positioned "Tech, IT,
+      Software engineering" background individuals to share their career paths
+      and opportunities that we're not even aware of.
       <br />
-      More of personal thoughts about things I do, realize and understand. That
-      means it's <span class="font-medium text-green-600">the safest</span> and
-      <span class="font-medium text-green-600"> the most welcome</span> place to
-      keep myself feeling <span class="font-medium"> ALIVE </span>.
-      <br />
+      This content might be very helpful for
+      <span class="font-medium text-green-600">new graduates</span> and/or
+      <span class="font-medium text-green-600">junior tech enthusiasts </span>
+      for exploring different career paths and learn from experienced
+      individuals who've done something
+      <span class="font-medium">AMAZING</span> on this path.
     </p>
-
     <blog-list :articles="fewPosts" />
     <Pagination :next-page="next" :page-no="1" url-prefix="/blog" />
   </div>
@@ -44,7 +42,7 @@ export default {
       return moment(value).format("MMMM Do YYYY");
     },
     async fetchFewPosts() {
-      const fewPosts = await this.$content("blog")
+      const fewPosts = await this.$content("interview")
         .only(["createdAt", "path", "title", "tags"])
         .sortBy("createdAt", "desc")
         .limit(5)
@@ -55,7 +53,7 @@ export default {
     },
   },
   head() {
-    return { title: "Blog | Azaa blog" };
+    return { title: "Career Interviews | Azaa blog" };
   },
 };
 </script>
