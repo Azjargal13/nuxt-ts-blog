@@ -1,22 +1,37 @@
 <template>
-  <div>
-    <h1 class="text-2xl text-center p-2 font-medium text-green-600 underline">
-      SPARK: All about career paths and opportunities
-    </h1>
-    <p class="text-base text-left md:w-1/2 p-2 mx-auto">
-      For helping you and I, and other tech industry professionals seeking
-      growth and support from their community, as well as expansion of the
-      network, I will be interviewing mid-career & senior positioned "Tech, IT,
-      Software engineering" background individuals to share their career paths
-      and opportunities that we're not even aware of.
-      <br />
-      This content might be very helpful for
-      <span class="font-medium text-green-600">new graduates</span> and/or
-      <span class="font-medium text-green-600">junior tech enthusiasts </span>
-      for exploring different career paths and learn from experienced
-      individuals who've done something
-      <span class="font-medium">AMAZING</span> on this path.
-    </p>
+  <div class="container flex flex-col">
+    <div class="md:mx-12">
+      <h1 class="text-2xl text-center p-2 font-medium text-green-600 underline">
+        SPARK: All about career paths and opportunities
+      </h1>
+      <p class="text-base text-left p-2 mx-auto md:w-1/2">
+        For helping tech industry professionals who seek constant growth and
+        support from their communities to realize opportunities in the tech
+        world.
+        <br />
+        <br />
+
+        This content might be very helpful for
+        <span class="font-medium text-green-600">new graduates</span> and/or
+        <span class="font-medium text-green-600"
+          >entry level tech enthusiasts
+        </span>
+        for exploring different career paths and learn from experienced
+        individuals who've gone through a lot and have done something
+        <span class="font-medium">AMAZING</span> on their paths.
+      </p>
+      <p
+        class="bg-gray-50 dark:bg-gray-800 text-base text-left p-2 mx-auto shadow-md md:w-1/2"
+      >
+        I will be interviewing mid-senior professionals from "Tech, IT, Software
+        engineering, Product Development" backgrounds to share their paths and
+        opportunities that we're not even aware of. Based on the interview,
+        bi-weekly a summary of the article will be published. (less than 5 mins
+        read time).
+      </p>
+    </div>
+    <br />
+
     <blog-list :articles="fewPosts" />
     <Pagination :next-page="next" :page-no="1" url-prefix="/blog" />
   </div>
@@ -43,7 +58,7 @@ export default {
     },
     async fetchFewPosts() {
       const fewPosts = await this.$content("interview")
-        .only(["createdAt", "path", "title", "tags"])
+        .only(["createdAt", "path", "title", "tags", "readingTime"])
         .sortBy("createdAt", "desc")
         .limit(5)
         .fetch();

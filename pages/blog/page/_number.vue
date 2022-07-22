@@ -16,7 +16,7 @@ export default {
   async asyncData({ $content, params, error }) {
     const pageNo = parseInt(params.number);
     const fiveArticles = await $content("blog")
-      .only(["createdAt", "path", "title", "tags"])
+      .only(["createdAt", "path", "title", "tags", "readingTime"])
       .sortBy("createdAt", "desc")
       .limit(5)
       .skip(4 * (pageNo - 1))
@@ -29,9 +29,9 @@ export default {
     return {
       nextPage,
       articles,
-      pageNo
+      pageNo,
     };
-  }
+  },
 };
 </script>
 <style scoped>

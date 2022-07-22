@@ -1,7 +1,17 @@
 <template>
   <div class="flex justify-center h-12 static bottom-0">
     <div class="divider flex flex-row justify-center">
-      <p class="prose dark:prose-dark text-center">&copy; Azaa in {{ date }}</p>
+      <p class="prose dark:prose-dark text-center">
+        &copy;
+
+        <a
+          href="https://www.linkedin.com/in/azjargal-gankhuyag"
+          target="_blank"
+        >
+          Azaa
+        </a>
+        in {{ date }}
+      </p>
     </div>
   </div>
 </template>
@@ -10,9 +20,9 @@
 export default {
   data() {
     return {
-      date: new Date().getFullYear()
+      date: new Date().getFullYear(),
     };
-  }
+  },
 };
 </script>
 

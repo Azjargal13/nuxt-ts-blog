@@ -1,18 +1,14 @@
 <template>
   <section class="flex container">
     <article class="prose dark:prose-dark prose-sm lg:prose-xl sm:prose-sm">
-      <h1>
-        About me: Who is Azaa?
-      </h1>
+      <h2>About me: Who is Azaa?</h2>
       <p>
         I'm someone who like to question things a lot and try to find answers by
         reading, observing, and listening.
       </p>
       <h4>some facts</h4>
       <ul>
-        <li>
-          born and raised in Ulaanbaatar, Mongolia.
-        </li>
+        <li>born and raised in Ulaanbaatar, Mongolia.</li>
         <li>
           studied Bachelor in Computer Science, majored hardware & network in
           Ulaanbaatar, Mongolia.
@@ -20,9 +16,7 @@
         <li>
           studied Master in Computer Science, majored CSE in Mumbai, India.
         </li>
-        <li>
-          work as a software engineer in Tokyo, Japan.
-        </li>
+        <li>work as a software engineer in Tokyo, Japan.</li>
       </ul>
 
       <p>
@@ -36,20 +30,16 @@
         Below is a bit more of personal. Feel free to go back and check out the
         blog posts too!
       </p>
-      <p class="text-xl font-medium ">
-        photos
-      </p>
+      <p class="text-xl font-medium">photos</p>
       <div class="shadow-md flex justify-center">
         <img
           src="https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg"
           alt="me"
-          class="p-6  lg:w-2/3"
+          class="p-6 lg:w-2/3"
         />
       </div>
 
-      <p class="text-xl font-medium">
-        Hobbies & Interests
-      </p>
+      <p class="text-xl font-medium">Hobbies & Interests</p>
       <li>
         Obsessive reading specifically topics on behavioral psychology, child
         psychology, personality and a bit of philosophy.
@@ -58,9 +48,7 @@
         A daughter of the Mother Nature, love to be around mountains, trees,
         forests, lakes, rivers and sea.
       </li>
-      <li>
-        kind of 'people person' however prefer 'solitude'!
-      </li>
+      <li>kind of 'people person' however prefer 'solitude'!</li>
       <p>
         That's all about short intro. Hope you can get something interesting or
         useful from the short articles. Appreciated your valuable time for
@@ -75,7 +63,7 @@ export default {
   layout: "blog",
   head() {
     return { title: "About | Azaa blog" };
-  }
+  },
 };
 </script>
 

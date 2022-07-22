@@ -8,8 +8,8 @@
 export default {
   head() {
     return {
-      title: "Azaa | Welcome to Blog :)"
+      title: "Azaa | Welcome to Blog :)",
     };
-  }
+  },
 };
 </script>

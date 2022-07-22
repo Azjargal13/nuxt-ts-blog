@@ -1,3 +1,4 @@
+import readingTime from 'reading-time'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -49,6 +50,13 @@ export default {
   modules: [
     "@nuxt/content"
   ],
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        document.readingTime = readingTime(document.text)
+      }
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -57,6 +65,9 @@ export default {
   colorMode: {
     preference: "light" // default value of $colorMode.preference
   },
-  target: "static"
+  target: "static",
+  plugins: [
+
+  ]
 
 }

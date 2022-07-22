@@ -5,7 +5,7 @@
       |
       <NuxtLink to="/interview" class="lg:mx-4 mx-2"> interview </NuxtLink>
       |
-      <NuxtLink to="/techblog" class="lg:mx-4 mx-2"> tech blog </NuxtLink>
+      <NuxtLink to="/techblog" class="lg:mx-4 mx-2"> tech </NuxtLink>
       |
       <NuxtLink to="/blog" class="lg:mx-4 mx-2"> blog </NuxtLink>
       |

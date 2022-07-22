@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container flex flex-col">
     <h1 class="text-2xl text-center p-2 font-medium text-green-600 underline">
       Personal Blog: Things I'd like to express after reflecting
     </h1>
@@ -45,7 +45,7 @@ export default {
     },
     async fetchFewPosts() {
       const fewPosts = await this.$content("blog")
-        .only(["createdAt", "path", "title", "tags"])
+        .only(["createdAt", "path", "title", "tags", "readingTime"])
         .sortBy("createdAt", "desc")
         .limit(5)
         .fetch();

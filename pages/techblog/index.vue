@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col container">
     <h1 class="text-2xl text-center p-2 font-medium text-green-600 underline">
       Tech Blog: Things I eagerly want to share after learning
     </h1>
@@ -41,7 +41,7 @@ export default {
     },
     async fetchFewPosts() {
       const fewPosts = await this.$content("techblog")
-        .only(["createdAt", "path", "title", "tags"])
+        .only(["createdAt", "path", "title", "tags", "readingTime"])
         .sortBy("createdAt", "desc")
         .limit(5)
         .fetch();
