@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/*"
-to = "/*/:splat"
+from = "/interview/*"
+to = "/interview/:splat"
 status = 200
