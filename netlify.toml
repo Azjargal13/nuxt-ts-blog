@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/interview/*"
-to = "/interview/:splat"
+from = "/*"
+to = "/index.html"
 status = 200
