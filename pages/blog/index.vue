@@ -19,7 +19,7 @@
       <br />
     </p>
 
-    <blog-list :articles="fewPosts" />
+    <blog-list :articles="posts" />
     <Pagination :next-page="next" :page-no="1" url-prefix="/blog" />
   </div>
 </template>
@@ -27,32 +27,19 @@
 <script>
 export default {
   layout: "blog",
-  data() {
+  async asyncData({ $content }) {
+    const articles = await $content("blog")
+      .only(["slug", "createdAt", "path", "title", "tags", "readingTime"])
+      .sortBy("createdAt", "desc")
+      .limit(5)
+      .fetch();
+
+    const next = articles.length === 5;
+    const posts = next ? articles.slice(0, -1) : articles;
     return {
-      fewPosts: [],
-      next: {},
+      posts,
+      next,
     };
-  },
-  mounted() {
-    this.fetchFewPosts().then((values) => {
-      this.fewPosts = values.posts;
-      this.next = values.nextPage;
-    });
-  },
-  methods: {
-    formatTime(value) {
-      return moment(value).format("MMMM Do YYYY");
-    },
-    async fetchFewPosts() {
-      const fewPosts = await this.$content("blog")
-        .only(["createdAt", "path", "title", "tags", "readingTime"])
-        .sortBy("createdAt", "desc")
-        .limit(5)
-        .fetch();
-      const nextPage = fewPosts.length === 5;
-      const posts = nextPage ? fewPosts.slice(0, -1) : fewPosts;
-      return { nextPage, posts };
-    },
   },
   head() {
     return { title: "Blog | Azaa blog" };

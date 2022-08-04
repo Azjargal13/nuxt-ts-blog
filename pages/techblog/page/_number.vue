@@ -1,6 +1,6 @@
 <template>
   <section>
-    <blog-list path="blog" :articles="articles" />
+    <blog-list :articles="articles" />
     <Pagination
       :prev-page="pageNo > 1"
       :next-page="nextPage"
@@ -17,7 +17,7 @@ export default {
     const pageNo = parseInt(params.number);
 
     const fiveArticles = await $content("techblog")
-      .only(["createdAt", "path", "title", "tags", "readingTime"])
+      .only(["slug", "createdAt", "path", "title", "tags", "readingTime"])
       .sortBy("createdAt", "desc")
       .limit(5)
       .skip(4 * (pageNo - 1))
