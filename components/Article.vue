@@ -3,12 +3,10 @@
     class="article prose dark:prose-dark prose-sm sm:prose lg:prose-xl mx-auto md:m-2"
   >
     <article
-      v-for="post in article"
-      :key="post.id"
       class="shadow-md dark:bg-gray-800 rounded p-4 md:p-12 blog-article sm:p-12"
     >
       <h2 class="text-left">
-        {{ post.title }}
+        {{ article.title }}
       </h2>
       <div class="flex justify-start items-center">
         <svg
@@ -25,8 +23,8 @@
           />
         </svg>
         <div>
-          <span v-for="(item, id) in post.tags" :key="id" class="m-0.5">
-            {{ addSeparator(id, post.tags.length, item) }}
+          <span v-for="(item, id) in article.tags" :key="id" class="m-0.5">
+            {{ addSeparator(id, article.tags.length, item) }}
           </span>
         </div>
       </div>
@@ -48,21 +46,21 @@
             />
           </svg>
 
-          {{ post.readingTime.text }}
+          {{ article.readingTime.text }}
         </p>
         <p>
-          {{ formatTime(post.createdAt) }}
+          {{ formatTime(article.createdAt) }}
         </p>
       </div>
-      <div v-if="post.image" class="mt-2">
+      <div v-if="article.image" class="mt-2">
         <img
-          :src="post.image"
+          :src="article.image"
           alt="img"
           class="max-h-1/5 min-w-sm"
           style="margin: 0 auto"
         />
       </div>
-      <nuxt-content :document="post" />
+      <nuxt-content :document="article" />
     </article>
   </section>
 </template>
@@ -71,22 +69,12 @@
 import moment from "moment";
 export default {
   props: {
-    path: {
-      type: String,
+    article: {
+      type: Object,
       required: true,
-      default: "",
     },
   },
-  data() {
-    return {
-      article: {},
-    };
-  },
-  async mounted() {
-    this.article = await this.$content(this.path)
-      .where({ slug: this.$route.params.title })
-      .fetch();
-  },
+
   methods: {
     formatTime(value) {
       return moment(value).format("MMMM Do YYYY");
