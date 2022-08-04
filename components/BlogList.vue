@@ -2,7 +2,7 @@
   <div class="wrapper divide-y-2 w-full lg:w-1/2 mx-auto divide-green-500">
     <div v-for="post in articles" :key="post.id" class="blog-list p-6 w-full">
       <div class="blog-col">
-        <NuxtLink :to="`${pathName}/${post.slug}`">
+        <NuxtLink :to="post.path">
           <h2 class="font-medium sm:text-lg mb-2">
             {{ post.title }}
           </h2>
@@ -63,10 +63,6 @@ export default {
   props: {
     articles: {
       type: Array,
-      required: true,
-    },
-    pathName: {
-      type: String,
       required: true,
     },
   },

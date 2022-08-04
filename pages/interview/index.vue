@@ -32,7 +32,7 @@
     </div>
     <br />
 
-    <blog-list :articles="articles" path-name="interview" />
+    <blog-list :articles="posts" />
     <Pagination :next-page="next" :page-no="1" url-prefix="/blog" />
   </div>
 </template>

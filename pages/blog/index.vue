@@ -19,7 +19,7 @@
       <br />
     </p>
 
-    <blog-list :articles="posts" path-name="blog" />
+    <blog-list :articles="posts" />
     <Pagination :next-page="next" :page-no="1" url-prefix="/blog" />
   </div>
 </template>

@@ -15,7 +15,7 @@
       <br />
     </p>
 
-    <blog-list :articles="posts" path-name="techblog" />
+    <blog-list :articles="posts" />
 
     <Pagination :next-page="next" :page-no="1" url-prefix="/techblog" />
   </div>
