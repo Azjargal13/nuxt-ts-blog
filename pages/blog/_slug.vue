@@ -4,7 +4,8 @@
     <div class="container justify-center flex">
       <Article :article="page" />
     </div>
-    <prev-next />
+    {{ prev }}
+    {{ next }}
   </div>
 </template>
 
