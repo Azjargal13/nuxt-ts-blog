@@ -26,8 +26,7 @@
         I will be interviewing mid-senior professionals from "Tech, IT, Software
         engineering, Product Development" backgrounds to share their paths and
         opportunities that we're not even aware of. Based on the interview,
-        bi-weekly a summary of the article will be published. (less than 5 mins
-        read time).
+        bi-weekly a bite-sized summary of the article will be published.
       </p>
     </div>
     <br />
@@ -54,7 +53,76 @@ export default {
     };
   },
   head() {
-    return { title: "Career Interviews | Azaa blog" };
+    return {
+      title: "Career interviews | Azaa | Azjargal",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            " For helping tech industry professionals who seek constant growth and support from their communities to realize opportunities in the tech world.",
+        },
+        // Test on: https://developers.facebook.com/tools/debug/ or https://socialsharepreview.com/
+        {
+          property: "og:site_name",
+          content:
+            "Azaa career interviews | Job opportunities in Tech industry",
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: "https://azjargal.me/",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "Career interviews | Azaa | Azjargal",
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:
+            " For helping tech industry professionals who seek constant growth and support from their communities to realize opportunities in the tech world.",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content:
+            "https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg",
+        },
+
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://azjargal.me/",
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "Career interviews | Azaa | Azjargal",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content:
+            " For helping tech industry professionals who seek constant growth and support from their communities to realize opportunities in the tech world.",
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content:
+            "https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg",
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `https://azjargal.me/interview`,
+        },
+      ],
+    };
   },
 };
 </script>

@@ -62,7 +62,72 @@
 export default {
   layout: "blog",
   head() {
-    return { title: "About | Azaa blog" };
+    return {
+      title: "About me | Azaa | Azjargal",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            " I am someone who like to question things a lot and try to find answers by reading, observing, and listening.",
+        },
+        // Test on: https://developers.facebook.com/tools/debug/ or https://socialsharepreview.com/
+        { property: "og:site_name", content: "Azaa Blog | Ablout" },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: "https://azjargal.me/",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "About me | Azaa | Azjargal",
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:
+            " I am someone who like to question things a lot and try to find answers by reading, observing, and listening.",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content:
+            "https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg",
+        },
+
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://azjargal.me/",
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: "About me | Azaa | Azjargal",
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content:
+            " I am someone who like to question things a lot and try to find answers by reading, observing, and listening.",
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content:
+            "https://res.cloudinary.com/ds9sourwm/image/upload/v1658122112/azjargal.me/editedAza_vtvufx.jpg",
+        },
+      ],
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `https://azjargal.me/about`,
+        },
+      ],
+    };
   },
 };
 </script>
