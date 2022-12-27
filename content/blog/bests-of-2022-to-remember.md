@@ -3,7 +3,6 @@ title: The Best of 2022 to Remember
 description: Environmental change does not require something big, tiny steps can lead something greater. Recent a few weeks, I am curious about climate change and its effect in our Nature, would like to join this movement, in order to others get familiar with it.
 tags: ["reflection", "journal"]
 label: [journal] 
-image: https://github.com/Azjargal13/nuxt-ts-blog/blob/master/assets/2022-to-remember.jpg
 createdAt: December 27, 2022
 author: Azaa
 ---
