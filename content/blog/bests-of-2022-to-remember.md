@@ -8,7 +8,7 @@ author: Azaa
 ---
 
 Hi there 👋🏻
-2022 is about the end and another adventurous new year going to start! I was thinking about collecting things I’ve enjoyed in this year and combining them into single post so I can read it in the future to remember. Basically a journal🦥
+2022 is about to end and another adventurous new year is about to start! I was thinking about collecting things I’ve enjoyed in this year and combining them into single post so I can read it in the future to remember. Basically a journal🦥
 
 Wish the sections include more interesting topics like best online/offline games, movies, parties, spontaneous activities etc., who knows maybe in 2023 all of them are challenged?
 
@@ -16,9 +16,9 @@ This time quite common topics are included such as books, audio books, cities I 
 
 ## Best 3 books
 
-- Power of Now by Eckhart Tolle
-- Supernormal: The untold story of Adversity by Dr Meg Jay
-- Ego is the Enemy by Ryan Holiday
+- [Power of Now by Eckhart Tolle](https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment-ebook/dp/B002361MLA/ref=sr_1_1?keywords=power+of+now+eckhart+tolle&qid=1672138343&s=digital-text&sprefix=power+of+now%2Cdigital-text%2C497&sr=1-1)
+- [Supernormal: The untold story of Adversity by Dr Meg Jay](https://www.amazon.com/Supernormal-Untold-Story-Adversity-Resilience-ebook/dp/B06XFR3D5S/ref=sr_1_1?keywords=supernormal+meg+jay&qid=1672138369&s=digital-text&sprefix=supernormal+%2Cdigital-text%2C309&sr=1-1)
+- [Ego is the Enemy by Ryan Holiday](https://www.amazon.com/Ego-Enemy-Ryan-Holiday-ebook/dp/B015NTIXWE/ref=sr_1_1?keywords=ego+is+the+enemy+ryan+holiday&qid=1672138392&s=digital-text&sprefix=ego+%2Cdigital-text%2C381&sr=1-1)
 
 In that particular order, yes!
 
@@ -47,7 +47,7 @@ Might know Dr Hardy from his TED talk or YT channel, it is very practical book. 
     This place actually made me awake half of the night questioning myself and for the first time I was quite terrified about my plan. Also it literally made me practice the “mindfulness meditation” which I was doing for years only in my peaceful room but in the real complicated, chaotic life 😂. It was interesting to feel my own anger, disappointment and joy at the same time.
 - Beppu, Oita
 
-    My bestie's sweet home. Beautiful place, loved visiting the uni campus located at the top of mountain and undoubtedly relaxing variety of onsens (hot spring bathes). Great to escape for quiet holiday.
+    My bestie's sweet home. Beautiful place, loved visiting the uni campus located at the top of mountain and undoubtedly relaxing variety of onsens (hot spring bathes). Great escape for quiet holiday.
 
 ## Best 3 activities
 
@@ -65,7 +65,7 @@ Might know Dr Hardy from his TED talk or YT channel, it is very practical book. 
 - [After Hours](https://podcasts.apple.com/us/podcast/after-hours/id1363110130)
 - [Daily Stoic](https://podcasts.apple.com/us/podcast/the-daily-stoic/id1430315931) 
 
-    This is best when doing exercise or jogging 🏃🏻
+    This is best when doing exercise or jogging 🏃🏻‍♀️
 
 ## Best 3 songs
 
