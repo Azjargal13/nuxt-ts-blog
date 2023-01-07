@@ -1,12 +1,10 @@
 ---
-title: walking with Why
+title: Walking with Why
 description: Values are definitely like compass, you know where you’re going but don’t know the destination. It gives us good direction especially when we’re confused about literally everything. 
 tags: ["journal"]
 createdAt: January, 7, 2022
 author: Azaa
 ---
-
-# Walking with Why
 
 I think it takes courage to walk with why. It is easier to say if someone’s life is not aligned with their own values, but can we at least think again why it is difficult to walk with why?
 
