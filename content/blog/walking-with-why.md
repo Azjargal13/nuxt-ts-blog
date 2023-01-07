@@ -2,7 +2,7 @@
 title: Walking with Why
 description: Values are definitely like compass, you know where you’re going but don’t know the destination. It gives us good direction especially when we’re confused about literally everything. 
 tags: ["journal"]
-createdAt: January, 7, 2022
+createdAt: January, 7, 2023
 author: Azaa
 ---
 
