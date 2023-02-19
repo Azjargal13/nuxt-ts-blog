@@ -1,4 +1,15 @@
-# nuxt-blog
+# Personal blog
+
+Hosted on http://azjargal.me/
+
+## Tech stack
+- NuxtJS
+- Typescript
+- Netlify
+
+## About what?
+- Articles about my insights
+- Tech articles, and tutorials 
 
 ## Build Setup
 
