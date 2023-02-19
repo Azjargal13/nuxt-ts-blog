@@ -72,7 +72,7 @@ export default {
             " I am someone who like to question things a lot and try to find answers by reading, observing, and listening.",
         },
         // Test on: https://developers.facebook.com/tools/debug/ or https://socialsharepreview.com/
-        { property: "og:site_name", content: "Azaa Blog | Ablout" },
+        { property: "og:site_name", content: "Azaa Blog | About" },
         { hid: "og:type", property: "og:type", content: "website" },
         {
           hid: "og:url",

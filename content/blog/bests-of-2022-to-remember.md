@@ -5,6 +5,7 @@ tags: ["reflection", "journal"]
 label: [journal] 
 createdAt: December 27, 2022
 author: Azaa
+image: "2022-best-to-remember"
 ---
 
 Hi there 👋🏻
