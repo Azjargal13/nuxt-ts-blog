@@ -4,6 +4,8 @@ description: Values are definitely like compass, you know where you’re going b
 tags: ["journal"]
 createdAt: January, 7, 2023
 author: Azaa
+image: walking-with-compass
+alt: Walking with compass 
 ---
 
 I think it takes courage to walk with why. It is easier to say if someone’s life is not aligned with their own values, but can we at least think again why it is difficult to walk with why?

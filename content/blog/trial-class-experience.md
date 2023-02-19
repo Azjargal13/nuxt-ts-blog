@@ -3,7 +3,8 @@ title: What mid-career MBA students want ...
 description: personal experience of attending MBA trial class at GLOBIS University.
 tags: ["education", "class", "mba"]
 label: [free-time, writing]
-image: "https://github.com/Azjargal13/nuxt-ts-blog/blob/master/assets/blog-writing.jpg"
+image: "blog-writing"
+alt: "Blog writing"
 createdAt: Oct, 30, 2021
 author: Azaa
 ---

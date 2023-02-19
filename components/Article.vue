@@ -54,11 +54,15 @@
       </div>
       <div v-if="article.image" class="mt-2">
         <img
-          :src="article.image"
-          alt="img"
+          :src="imgSrc(article.image)"
+          :alt="article.alt || 'alt-img'"
           class="max-h-1/5 min-w-sm"
           style="margin: 0 auto"
         />
+        <figcaption>
+          Images from the awesome
+          <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+        </figcaption>
       </div>
       <nuxt-content :document="article" />
     </article>
@@ -82,6 +86,11 @@ export default {
     addSeparator(id, length, value) {
       return id !== length - 1 ? ` ${value} |` : value;
     },
+    imgSrc(imageName) {
+      return imageName.includes("https://")
+        ? imageName
+        : require(`~/assets/${imageName}.jpg`);
+    },
   },
 };
 </script>
@@ -97,5 +106,10 @@ export default {
 .article {
   align-items: center;
   width: inherit;
+}
+figcaption {
+  text-align: center;
+  font-size: small;
+  color: dimgray;
 }
 </style>
