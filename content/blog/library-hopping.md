@@ -2,8 +2,8 @@
 title: Library hopping aka Serenity seeking
 description: To start love the inner, one of the great way is to start from the thing which you genuinely like and have interest in.
 tags: ["reflection"]
-label: [writing]
-image: 'library'
+label: ["writing"]
+image: "library"
 createdAt: March, 4, 2023
 author: Azaa
 ---
