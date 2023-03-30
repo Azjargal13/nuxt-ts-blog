@@ -3,7 +3,7 @@ title: Who’s in-charge of running the show of your mind and body?
 description: Write a sentence or two about this post
 tags: ["journal"]
 image: "whole-living-brain"
-createdAt: March, 31, 2022
+createdAt: March, 31, 2023
 author: Azaa
 ---
 
