@@ -13,11 +13,11 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.26",
     "@amcharts/amcharts4-geodata": "^4.1.23",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "core-js": "^3.23.5",
     "moment": "^2.29.4",
     "nuxt": "^2.15.8",
-    "reading-time": "^1.5.0",
-    "vue-gtag": "^1.16.1"
+    "reading-time": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

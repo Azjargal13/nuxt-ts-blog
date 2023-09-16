@@ -29,11 +29,6 @@ export default {
     "~assets/styles/style.css"
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: "~/plugins/vue-gtag" }
-  ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -43,7 +38,8 @@ export default {
     "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode"
+    "@nuxtjs/color-mode",
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -66,8 +62,10 @@ export default {
     preference: "light" // default value of $colorMode.preference
   },
   target: "static",
-  plugins: [
-
-  ]
-
+  googleAnalytics: {
+    id: 'G-Y4QBD9WJS4',
+    autoTracking: {
+      screenview: true
+    }
+  }
 }
