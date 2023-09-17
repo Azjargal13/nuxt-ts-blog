@@ -30,7 +30,7 @@ export default {
     script: [
       // Google Analytics Code
       {
-        src: ga4_script,
+        src: process.env.ga4_script,
         async: true,
       },
       { src: "/js/analytics.js" },
@@ -77,7 +77,7 @@ export default {
   },
   target: "static",
   googleAnalytics: {
-    id: google_analytics_id,
+    id: process.env.google_analytics_id,
     autoTracking: {
       screenview: true
     }
