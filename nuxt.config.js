@@ -22,10 +22,10 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/logo.png" }
     ],
-    env: {
+
+    publicRuntimeConfig: {
       ga4_script: process.env.GA4_SCRIPT,
       google_analytics_id: process.env.GOOGLE_ANALYTICS_ID
-
     },
     script: [
       // Google Analytics Code
