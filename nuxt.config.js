@@ -23,10 +23,14 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/logo.png" }
     ],
 
+    publicRuntimeConfig: {
+      ga4_script: process.env.GA4_SCRIPT,
+      google_analytics_id: process.env.GOOGLE_ANALYTICS_ID
+    },
     script: [
       // Google Analytics Code
       {
-        src: process.env.GA4_SCRIPT,
+        src: process.env.ga4_script,
         async: true,
       },
       { src: "/js/analytics.js" },
@@ -73,7 +77,7 @@ export default {
   },
   target: "static",
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
+    id: process.env.google_analytics_id,
     autoTracking: {
       screenview: true
     }
