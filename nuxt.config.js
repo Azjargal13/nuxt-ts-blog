@@ -21,7 +21,17 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/logo.png" }
+    ],
+
+    script: [
+      // Google Analytics Code
+      {
+        src: process.env.GA4_SCRIPT,
+        async: true,
+      },
+      { src: "/js/analytics.js" },
     ]
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -63,7 +73,7 @@ export default {
   },
   target: "static",
   googleAnalytics: {
-    id: 'G-Y4QBD9WJS4',
+    id: process.env.GOOGLE_ANALYTICS_ID,
     autoTracking: {
       screenview: true
     }
