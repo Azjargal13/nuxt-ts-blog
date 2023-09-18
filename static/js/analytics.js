@@ -4,4 +4,4 @@ function gtag() {
 }
 gtag("js", new Date());
 
-gtag("config", process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID);
+gtag("config", $config.googleAnalyticsId);
