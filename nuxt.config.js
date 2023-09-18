@@ -22,15 +22,10 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/logo.png" }
     ],
-
-    publicRuntimeConfig: {
-      ga4_script: process.env.NUXT_ENV_GA4_SCRIPT,
-      google_analytics_id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID
-    },
     script: [
       // Google Analytics Code
       {
-        src: process.env.ga4_script,
+        src: process.env.NUXT_ENV_GA4_SCRIPT,
         async: true,
       },
       { src: "/js/analytics.js" },
@@ -77,7 +72,7 @@ export default {
   },
   target: "static",
   googleAnalytics: {
-    id: process.env.google_analytics_id,
+    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
     autoTracking: {
       screenview: true
     }
