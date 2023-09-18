@@ -40,6 +40,9 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  publicRuntimeConfig: {
+    googleAnalyticsId: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID,
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
