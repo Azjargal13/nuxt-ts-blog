@@ -28,7 +28,7 @@ export default {
         src: process.env.NUXT_ENV_GA4_SCRIPT,
         async: true,
       },
-      { src: "/js/analytics.js" },
+      { src: "js/analytics.js" },
     ]
 
   },
