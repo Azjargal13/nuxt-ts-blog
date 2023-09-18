@@ -24,8 +24,8 @@ export default {
     ],
 
     publicRuntimeConfig: {
-      ga4_script: process.env.GA4_SCRIPT,
-      google_analytics_id: process.env.GOOGLE_ANALYTICS_ID
+      ga4_script: process.env.NUXT_ENV_GA4_SCRIPT,
+      google_analytics_id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID
     },
     script: [
       // Google Analytics Code
